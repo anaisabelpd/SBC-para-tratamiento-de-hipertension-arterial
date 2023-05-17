@@ -25,3 +25,42 @@ categoria(PAS,PAD,grado_III):-
 categoria(PAS,PAD,hipertension_sistolica_aislada):-
   PAS>=140,
   PAD<90.
+  
+% FAC factores de riesgo cardiovasculares
+% LOD lesion en organo diana
+% DM diabetis mellitus
+% RCV riesgo cardiovascular
+
+% Reglas para la estratificacion del RCV
+rcv(0,no,no,grado_I,riesgo_bajo).
+rcv(0,no,no,grado_II,riesgo_moderado).
+rcv(0,no,no,grado_III,riesgo_alto).
+
+rcv(1,no,no,prehipertension,riesgo_bajo).
+rcv(1,no,no,grado_I,riesgo_moderado).
+rcv(1,no,no,grado_II,riesgo_moderado).
+rcv(1,no,no,grado_III,riesgo_alto).
+rcv(2,no,no,prehipertension,riesgo_bajo).
+rcv(2,no,no,grado_I,riesgo_moderado).
+rcv(2,no,no,grado_II,riesgo_moderado).
+rcv(2,no,no,grado_III,riesgo_alto).
+
+rcv(FRC,LOD,DM,prehipertension,riesgo_moderado):-
+  FRC>=3;
+  LOD=si;
+  DM=si.
+rcv(FRC,LOD,DM,grado_I,riesgo_alto):-
+  FRC>=3;
+  LOD=si;
+  DM=si.
+rcv(FRC,LOD,DM,grado_II,riesgo_alto):-
+  FRC>=3;
+  LOD=si;
+  DM=si.
+rcv(FRC,LOD,DM,grado_III,riesgo_alto):-
+  FRC>=3;
+  LOD=si;
+  DM=si.
+  
+
+
