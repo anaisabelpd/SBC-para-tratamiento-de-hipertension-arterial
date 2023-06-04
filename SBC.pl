@@ -63,4 +63,32 @@ rcv(FRC,LOD,DM,grado_III,riesgo_alto):-
   DM=si.
   
 
+% Propuesta de estrategia terapeutica segun riesgo cardiovascular
+estrategia(X,Y):-
+ X=1,Y="Sugerir cambios en el estilo de vida. No intervenir sobre la PA.";
+ X=2,Y="Cambios en el estilo de vida. No intervenir sobre la PA.";
+ X=3,Y="Cambios en el estilo de vida. No intervenir sobre la PA. Considerar trataemiento de LOD.";
+ X=4,Y="Cambios en el estilo de vida durante varios meses, si no control agnadir tratamiento para PA con un objetivo de <140/90.";
+ X=5,Y="Cambios en el estilo de vida durante varias semanas, si no control agnadir tratamiento para PA con un objetivo de <140/90.";
+ X=6,Y="Cambios en el estilo de vida. Tratamiento inmediato para la PA con un objetivo de <140/90. Tratamiento de FRC.".
+ 
+propuesta_estrategia_terapetica(Lista_FRC,LOD,DM,Categoria,Estrategia):-
+  length(Lista_FRC,Y),Y=0,LOD=false, DM=false,
+  (Categoria="prehipertension",estrategia(1,Estrategia),!;
+   Categoria="grado I",estrategia(4,Estrategia),!;
+   Categoria="grado II",estrategia(5,Estrategia),!;
+   Categoria="grado III",estrategia(6,Estrategia),!)
+   ;
+   length(Lista_FRC,Y),Y<3,LOD=false, DM=false,
+  (Categoria="prehipertension",estrategia(2,Estrategia);
+   Categoria="grado I",estrategia(5,Estrategia);
+   Categoria="grado II",estrategia(5,Estrategia);
+   Categoria="grado III",estrategia(6,Estrategia))
+   ;
+   length(Lista_FRC,Y),(Y>=3;LOD=true; DM=true),
+  (Categoria="prehipertension",estrategia(3,Estrategia);
+   Categoria="grado I",estrategia(6,Estrategia);
+   Categoria="grado II",estrategia(6,Estrategia);
+   Categoria="grado III",estrategia(6,Estrategia))
+   .
 
