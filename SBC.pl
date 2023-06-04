@@ -57,22 +57,22 @@ estrategia(6,"Cambios en el estilo de vida. Tratamiento inmediato para la PA con
 
 % Propuesta de estrategia terapeutica segun riesgo cardiovascular
 propuesta_estrategia_terapeutica(Lista_FRC,LOD,DM,Categoria,Estrategia):-
-  length(Lista_FRC,Y),Y=0,LOD=false, DM=false,
-  (Categoria="Prehipertensión",estrategia(1,Estrategia),!;
-   Categoria="Grado I",estrategia(4,Estrategia),!;
-   Categoria="Grado II",estrategia(5,Estrategia),!;
-   Categoria="Grado III",estrategia(6,Estrategia),!)
+  length(Lista_FRC,Y),
+  (
+   Y=0,LOD=false, DM=false,
+   (Categoria="Prehipertensión",estrategia(1,Estrategia),!;
+    Categoria="Grado I",estrategia(4,Estrategia),!;
+    Categoria="Grado II",estrategia(5,Estrategia),!;
+    Categoria="Grado III",estrategia(6,Estrategia),!)
    ;
-   length(Lista_FRC,Y),Y<3,LOD=false, DM=false,
-  (Categoria="Prehipertensión",estrategia(2,Estrategia),!;
-   Categoria="Grado I",estrategia(5,Estrategia),!;
-   Categoria="Grado II",estrategia(5,Estrategia),!;
-   Categoria="Grado III",estrategia(6,Estrategia),!)
+   Y<3,LOD=false, DM=false,
+   (Categoria="Prehipertensión",estrategia(2,Estrategia),!;
+    (Categoria="Grado I";Categoria="Grado II"),estrategia(5,Estrategia),!;
+    Categoria="Grado III",estrategia(6,Estrategia),!)
    ;
-   length(Lista_FRC,Y),(Y>=3;LOD=true; DM=true),
-  (Categoria="Prehipertensión",estrategia(3,Estrategia);
-   Categoria="Grado I",estrategia(6,Estrategia);
-   Categoria="Grado II",estrategia(6,Estrategia);
-   Categoria="Grado III",estrategia(6,Estrategia))
-   .
+   (Y>=3;LOD=true; DM=true),
+   (Categoria="Prehipertensión",estrategia(3,Estrategia);
+    (Categoria="Grado I";Categoria="Grado II";Categoria="Grado III"),estrategia(6,Estrategia)
+   )
+  ).
 
