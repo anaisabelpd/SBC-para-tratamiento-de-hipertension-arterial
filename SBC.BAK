@@ -80,10 +80,10 @@ propuesta_estrategia_terapetica(Lista_FRC,LOD,DM,Categoria,Estrategia):-
    Categoria="grado III",estrategia(6,Estrategia),!)
    ;
    length(Lista_FRC,Y),Y<3,LOD=false, DM=false,
-  (Categoria="prehipertension",estrategia(2,Estrategia);
-   Categoria="grado I",estrategia(5,Estrategia);
-   Categoria="grado II",estrategia(5,Estrategia);
-   Categoria="grado III",estrategia(6,Estrategia))
+  (Categoria="prehipertension",estrategia(2,Estrategia),!;
+   Categoria="grado I",estrategia(5,Estrategia),!;
+   Categoria="grado II",estrategia(5,Estrategia),!;
+   Categoria="grado III",estrategia(6,Estrategia),!)
    ;
    length(Lista_FRC,Y),(Y>=3;LOD=true; DM=true),
   (Categoria="prehipertension",estrategia(3,Estrategia);
