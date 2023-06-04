@@ -58,9 +58,14 @@ public class TestWindow extends javax.swing.JFrame {
         rb_coo_3 = new arterial_tension.customs.RadioButton();
         rb_coo_5 = new arterial_tension.customs.RadioButton();
         rb_coo_4 = new arterial_tension.customs.RadioButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
+        rb_coo_6 = new arterial_tension.customs.RadioButton();
+        rb_coo_7 = new arterial_tension.customs.RadioButton();
+        rb_coo_8 = new arterial_tension.customs.RadioButton();
+        rb_coo_9 = new arterial_tension.customs.RadioButton();
+        rb_coo_10 = new arterial_tension.customs.RadioButton();
+        rb_coo_11 = new arterial_tension.customs.RadioButton();
+        rb_coo_12 = new arterial_tension.customs.RadioButton();
         jp_flexibility = new javax.swing.JPanel();
         jp_footer2 = new javax.swing.JPanel();
         btn_next2 = new arterial_tension.customs.Button();
@@ -194,7 +199,7 @@ public class TestWindow extends javax.swing.JFrame {
         jLabel5.setText("Complete los siguientes campos:");
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel10.setText("TA Diastolica");
+        jLabel10.setText("PA Diastólica");
 
         tf_age1.setToolTipText("Inserte su edad");
         tf_age1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -204,7 +209,7 @@ public class TestWindow extends javax.swing.JFrame {
         });
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel11.setText("TA Sistolica");
+        jLabel11.setText("PA Sistólica");
 
         tf_age2.setToolTipText("Inserte su edad");
         tf_age2.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -314,7 +319,7 @@ public class TestWindow extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_footer1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(btn_previous1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 441, Short.MAX_VALUE)
                 .addComponent(btn_next1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
@@ -328,56 +333,98 @@ public class TestWindow extends javax.swing.JFrame {
                 .addGap(0, 0, 0))
         );
 
-        bgroup_coordination.add(rb_coo_1);
+        rb_coo_1.setBackground(new java.awt.Color(102, 255, 0));
         rb_coo_1.setSelected(true);
-        rb_coo_1.setText("<html>No mantiene el equilibrio sobre un pie ni tan siquiera balanceándose o no es capaz de mantener <br> la posición durante cinco segundos.");
+        rb_coo_1.setText("Gota");
         rb_coo_1.setActionCommand("No mantiene el equilibrio");
         rb_coo_1.setFocusPainted(false);
         rb_coo_1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         rb_coo_1.setIconTextGap(8);
+        rb_coo_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rb_coo_1ActionPerformed(evt);
+            }
+        });
 
-        bgroup_coordination.add(rb_coo_2);
-        rb_coo_2.setText("Mantiene el equilibrio al menos cinco segundos, aunque sea necesario balancearse.");
+        rb_coo_2.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_2.setText("Asma");
         rb_coo_2.setActionCommand("Mantiene el equilibrio al menos cinco segundos");
         rb_coo_2.setFocusPainted(false);
         rb_coo_2.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         rb_coo_2.setIconTextGap(8);
 
-        bgroup_coordination.add(rb_coo_3);
-        rb_coo_3.setText("Mantiene el equilibrio por lo menos diez segundos, aunque sea balanceándose en algún momento.");
+        rb_coo_3.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_3.setText("Bloqueo AV grado II");
         rb_coo_3.setActionCommand("Mantiene el equilibrio por lo menos diez segundos");
         rb_coo_3.setFocusPainted(false);
         rb_coo_3.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         rb_coo_3.setIconTextGap(8);
 
-        bgroup_coordination.add(rb_coo_5);
-        rb_coo_5.setText("<html>Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima <br> de la cabeza, aunque sea balanceándose.");
+        rb_coo_5.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_5.setText("Disfunción del VI grave");
         rb_coo_5.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
         rb_coo_5.setFocusPainted(false);
         rb_coo_5.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         rb_coo_5.setIconTextGap(8);
 
-        bgroup_coordination.add(rb_coo_4);
-        rb_coo_4.setText("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados, aunque sea balanceándose.");
+        rb_coo_4.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_4.setText("Bloqueo AV grado III");
         rb_coo_4.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados");
         rb_coo_4.setFocusPainted(false);
         rb_coo_4.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         rb_coo_4.setIconTextGap(8);
 
-        jScrollPane1.setBorder(null);
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Hay que descalzarse sobre una superficie lisa y no deslizante y levantar una pierna sin que esta entre en contacto con la pierna de apoyo. Mientras dura el ejercicio, las manos se mantienen apoyadas sin esfuerzo en las caderas. Se da como buena aquella posición que es capaz de mantenerse sin tener que hacer movimientos compensatorios para evitar perder el equilibrio.");
-        jTextArea1.setWrapStyleWord(true);
-        jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextArea1.setFocusable(false);
-        jScrollPane1.setViewportView(jTextArea1);
-
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel1.setText("Seleccione:");
+        jLabel1.setText("Seleccione a partir de las enfermedades, situaciones o padecimientos que presenta el paciente:");
+
+        rb_coo_6.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_6.setText("Insuficiencia cardiaca");
+        rb_coo_6.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_6.setFocusPainted(false);
+        rb_coo_6.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_6.setIconTextGap(8);
+
+        rb_coo_7.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_7.setText("Embarazo");
+        rb_coo_7.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_7.setFocusPainted(false);
+        rb_coo_7.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_7.setIconTextGap(8);
+
+        rb_coo_8.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_8.setText("Angioedema");
+        rb_coo_8.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_8.setFocusPainted(false);
+        rb_coo_8.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_8.setIconTextGap(8);
+
+        rb_coo_9.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_9.setText("Hiperpotasemia");
+        rb_coo_9.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_9.setFocusPainted(false);
+        rb_coo_9.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_9.setIconTextGap(8);
+
+        rb_coo_10.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_10.setText("Estenosis arterial renal bilateral");
+        rb_coo_10.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_10.setFocusPainted(false);
+        rb_coo_10.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_10.setIconTextGap(8);
+
+        rb_coo_11.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_11.setText("Insuficiencia renal aguda");
+        rb_coo_11.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_11.setFocusPainted(false);
+        rb_coo_11.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_11.setIconTextGap(8);
+
+        rb_coo_12.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_12.setText("Insuficiencia renal grave");
+        rb_coo_12.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_12.setFocusPainted(false);
+        rb_coo_12.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_12.setIconTextGap(8);
 
         javax.swing.GroupLayout jp_coordinationLayout = new javax.swing.GroupLayout(jp_coordination);
         jp_coordination.setLayout(jp_coordinationLayout);
@@ -385,44 +432,63 @@ public class TestWindow extends javax.swing.JFrame {
             jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jp_footer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jp_coordinationLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jp_coordinationLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jp_coordinationLayout.createSequentialGroup()
-                        .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(rb_coo_5, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
-                            .addComponent(rb_coo_4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
+                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_coordinationLayout.createSequentialGroup()
+                        .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(rb_coo_1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(rb_coo_2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(32, 32, 32))))
+                            .addComponent(rb_coo_3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(60, 60, 60)
+                        .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(rb_coo_10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jp_coordinationLayout.setVerticalGroup(
             jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_coordinationLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
+                .addGap(44, 44, 44)
                 .addComponent(jLabel1)
                 .addGap(12, 12, 12)
-                .addComponent(rb_coo_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rb_coo_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rb_coo_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rb_coo_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rb_coo_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
                 .addComponent(jp_footer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
         );
 
-        tabbed.addTab("Formulario 2", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_equanimity.png")), jp_coordination); // NOI18N
+        tabbed.addTab("Contraindicaciones", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_equanimity.png")), jp_coordination); // NOI18N
 
         jp_flexibility.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -917,6 +983,10 @@ public class TestWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_age2KeyReleased
 
+    private void rb_coo_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_coo_1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rb_coo_1ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1118,11 +1188,9 @@ public class TestWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
@@ -1138,10 +1206,17 @@ public class TestWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jp_resistance;
     private javax.swing.JPanel jp_strength;
     private arterial_tension.customs.RadioButton rb_coo_1;
+    private arterial_tension.customs.RadioButton rb_coo_10;
+    private arterial_tension.customs.RadioButton rb_coo_11;
+    private arterial_tension.customs.RadioButton rb_coo_12;
     private arterial_tension.customs.RadioButton rb_coo_2;
     private arterial_tension.customs.RadioButton rb_coo_3;
     private arterial_tension.customs.RadioButton rb_coo_4;
     private arterial_tension.customs.RadioButton rb_coo_5;
+    private arterial_tension.customs.RadioButton rb_coo_6;
+    private arterial_tension.customs.RadioButton rb_coo_7;
+    private arterial_tension.customs.RadioButton rb_coo_8;
+    private arterial_tension.customs.RadioButton rb_coo_9;
     private arterial_tension.customs.RadioButton rb_fle_1;
     private arterial_tension.customs.RadioButton rb_fle_2;
     private arterial_tension.customs.RadioButton rb_fle_3;

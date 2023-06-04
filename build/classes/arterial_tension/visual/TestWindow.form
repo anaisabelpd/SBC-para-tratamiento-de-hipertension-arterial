@@ -308,7 +308,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="13" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="TA Diastolica"/>
+                    <Property name="text" type="java.lang.String" value="PA Diast&#xf3;lica"/>
                   </Properties>
                 </Component>
                 <Component class="arterial_tension.customs.TextField" name="tf_age1">
@@ -324,7 +324,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="13" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="TA Sistolica"/>
+                    <Property name="text" type="java.lang.String" value="PA Sist&#xf3;lica"/>
                   </Properties>
                 </Component>
                 <Component class="arterial_tension.customs.TextField" name="tf_age2">
@@ -345,8 +345,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Formulario 2">
-                    <Property name="tabTitle" type="java.lang.String" value="Formulario 2"/>
+                  <JTabbedPaneConstraints tabName="Contraindicaciones">
+                    <Property name="tabTitle" type="java.lang.String" value="Contraindicaciones"/>
                     <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/arterial_tension/images/icon_equanimity.png"/>
                     </Property>
@@ -359,45 +359,70 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jp_footer1" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLabel1" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jScrollPane1" min="-2" pref="661" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="rb_coo_5" pref="661" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_4" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_3" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_2" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                       <Component id="rb_coo_1" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel1" max="32767" attributes="0"/>
+                                      <Component id="rb_coo_2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="rb_coo_3" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="rb_coo_5" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="rb_coo_6" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="rb_coo_4" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="32" pref="32" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="rb_coo_10" max="32767" attributes="0"/>
+                                      <Component id="rb_coo_9" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="rb_coo_8" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="rb_coo_7" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="rb_coo_11" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="rb_coo_12" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="rb_coo_1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rb_coo_1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_coo_7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="rb_coo_2" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rb_coo_2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_coo_8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="rb_coo_3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rb_coo_3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_coo_9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="rb_coo_4" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rb_coo_4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_coo_10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="rb_coo_5" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rb_coo_5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_coo_11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rb_coo_6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_coo_12" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="147" max="32767" attributes="0"/>
                           <Component id="jp_footer1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       </Group>
@@ -418,7 +443,7 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                               <Component id="btn_previous1" min="-2" pref="118" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="441" max="32767" attributes="0"/>
                               <Component id="btn_next1" min="-2" pref="118" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                           </Group>
@@ -483,11 +508,11 @@
                 </Container>
                 <Component class="arterial_tension.customs.RadioButton" name="rb_coo_1">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="bgroup_coordination"/>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
                     <Property name="selected" type="boolean" value="true"/>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;No mantiene el equilibrio sobre un pie ni tan siquiera balance&#xe1;ndose o no es capaz de mantener &lt;br&gt; la posici&#xf3;n durante cinco segundos."/>
+                    <Property name="text" type="java.lang.String" value="Gota"/>
                     <Property name="actionCommand" type="java.lang.String" value="No mantiene el equilibrio"/>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -495,13 +520,16 @@
                     </Property>
                     <Property name="iconTextGap" type="int" value="8"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rb_coo_1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="arterial_tension.customs.RadioButton" name="rb_coo_2">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="bgroup_coordination"/>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos, aunque sea necesario balancearse."/>
+                    <Property name="text" type="java.lang.String" value="Asma"/>
                     <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos"/>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -512,10 +540,10 @@
                 </Component>
                 <Component class="arterial_tension.customs.RadioButton" name="rb_coo_3">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="bgroup_coordination"/>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Mantiene el equilibrio por lo menos diez segundos, aunque sea balance&#xe1;ndose en alg&#xfa;n momento."/>
+                    <Property name="text" type="java.lang.String" value="Bloqueo AV grado II"/>
                     <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio por lo menos diez segundos"/>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -526,10 +554,10 @@
                 </Component>
                 <Component class="arterial_tension.customs.RadioButton" name="rb_coo_5">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="bgroup_coordination"/>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima &lt;br&gt; de la cabeza, aunque sea balance&#xe1;ndose."/>
+                    <Property name="text" type="java.lang.String" value="Disfunci&#xf3;n del VI grave"/>
                     <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -540,10 +568,10 @@
                 </Component>
                 <Component class="arterial_tension.customs.RadioButton" name="rb_coo_4">
                   <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="bgroup_coordination"/>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados, aunque sea balance&#xe1;ndose."/>
+                    <Property name="text" type="java.lang.String" value="Bloqueo AV grado III"/>
                     <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados"/>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -552,42 +580,110 @@
                     <Property name="iconTextGap" type="int" value="8"/>
                   </Properties>
                 </Component>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-                  <Properties>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="null"/>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                  </AuxValues>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                  <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea1">
-                      <Properties>
-                        <Property name="columns" type="int" value="20"/>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Segoe UI" size="13" style="0"/>
-                        </Property>
-                        <Property name="lineWrap" type="boolean" value="true"/>
-                        <Property name="rows" type="int" value="5"/>
-                        <Property name="text" type="java.lang.String" value="Hay que descalzarse sobre una superficie lisa y no deslizante y levantar una pierna sin que esta entre en contacto con la pierna de apoyo. Mientras dura el ejercicio, las manos se mantienen apoyadas sin esfuerzo en las caderas. Se da como buena aquella posici&#xf3;n que es capaz de mantenerse sin tener que hacer movimientos compensatorios para evitar perder el equilibrio."/>
-                        <Property name="wrapStyleWord" type="boolean" value="true"/>
-                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                          <Color id="Text Cursor"/>
-                        </Property>
-                        <Property name="focusable" type="boolean" value="false"/>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
                 <Component class="javax.swing.JLabel" name="jLabel1">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="13" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Seleccione:"/>
+                    <Property name="text" type="java.lang.String" value="Seleccione a partir de las enfermedades, situaciones o padecimientos que presenta el paciente:"/>
+                  </Properties>
+                </Component>
+                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_6">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Insuficiencia cardiaca"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
+                    <Property name="focusPainted" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="13" style="0"/>
+                    </Property>
+                    <Property name="iconTextGap" type="int" value="8"/>
+                  </Properties>
+                </Component>
+                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_7">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Embarazo"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
+                    <Property name="focusPainted" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="13" style="0"/>
+                    </Property>
+                    <Property name="iconTextGap" type="int" value="8"/>
+                  </Properties>
+                </Component>
+                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_8">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Angioedema"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
+                    <Property name="focusPainted" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="13" style="0"/>
+                    </Property>
+                    <Property name="iconTextGap" type="int" value="8"/>
+                  </Properties>
+                </Component>
+                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_9">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Hiperpotasemia"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
+                    <Property name="focusPainted" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="13" style="0"/>
+                    </Property>
+                    <Property name="iconTextGap" type="int" value="8"/>
+                  </Properties>
+                </Component>
+                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_10">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Estenosis arterial renal bilateral"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
+                    <Property name="focusPainted" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="13" style="0"/>
+                    </Property>
+                    <Property name="iconTextGap" type="int" value="8"/>
+                  </Properties>
+                </Component>
+                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_11">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Insuficiencia renal aguda"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
+                    <Property name="focusPainted" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="13" style="0"/>
+                    </Property>
+                    <Property name="iconTextGap" type="int" value="8"/>
+                  </Properties>
+                </Component>
+                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_12">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Insuficiencia renal grave"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
+                    <Property name="focusPainted" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="13" style="0"/>
+                    </Property>
+                    <Property name="iconTextGap" type="int" value="8"/>
                   </Properties>
                 </Component>
               </SubComponents>
