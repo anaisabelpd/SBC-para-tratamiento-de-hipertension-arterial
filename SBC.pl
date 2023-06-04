@@ -2,12 +2,12 @@
 % PAS presion arterial sistolica
 % PAD presion arterial diastolica
 
-categoria(PAS,PAD,"Hipertensión sistólica aislada"):-
+categoria(PAS,PAD,"Hipertensiï¿½n sistï¿½lica aislada"):-
   PAS>=140,PAD<90,!.
 categoria(PAS,PAD,"Normal"):-
   PAS<120,!;
   PAD<80,!.
-categoria(PAS,PAD,"Prehipertensión"):-
+categoria(PAS,PAD,"Prehipertensiï¿½n"):-
   PAS<140,!;
   PAD<90,!.
 categoria(PAS,PAD,"Grado I"):-
@@ -36,13 +36,13 @@ rcv(Lista_FRC,LOD,DM,Categoria,Riesgo):-
    );
    Y<3,LOD=false,DM=false,
    (
-    Categoria="Prehipertensión",Riesgo="Riesgo bajo",!;
+    Categoria="Prehipertensiï¿½n",Riesgo="Riesgo bajo",!;
     (Categoria="Grado I";Categoria="Grado II"),Riesgo="Riesgo moderado",!;
     Categoria="Grado III",Riesgo="Riesgo alto",!
    );
    (Y>=3;LOD=true;DM=true),
    (
-    Categoria="Prehipertensión",Riesgo="Moderado";
+    Categoria="Prehipertensiï¿½n",Riesgo="Moderado";
     (Categoria="Grado I";Categoria="Grado II";Categoria="Grado III"),Riesgo="Riesgo alto"
    )
   ).
@@ -51,8 +51,8 @@ rcv(Lista_FRC,LOD,DM,Categoria,Riesgo):-
 estrategia(1,"Sugerir cambios en el estilo de vida. No intervenir sobre la PA.").
 estrategia(2,"Cambios en el estilo de vida. No intervenir sobre la PA.").
 estrategia(3,"Cambios en el estilo de vida. No intervenir sobre la PA. Considerar tratamiento de LOD.").
-estrategia(4,"Cambios en el estilo de vida durante varios meses, si no control añadir tratamiento para PA con un objetivo de <140/90.").
-estrategia(5,"Cambios en el estilo de vida durante varias semanas, si no control añadir tratamiento para PA con un objetivo de <140/90.").
+estrategia(4,"Cambios en el estilo de vida durante varios meses, si no control aï¿½adir tratamiento para PA con un objetivo de <140/90.").
+estrategia(5,"Cambios en el estilo de vida durante varias semanas, si no control aï¿½adir tratamiento para PA con un objetivo de <140/90.").
 estrategia(6,"Cambios en el estilo de vida. Tratamiento inmediato para la PA con un objetivo de <140/90. Tratamiento de FRC.").
 
 % Propuesta de estrategia terapeutica segun riesgo cardiovascular
@@ -60,19 +60,54 @@ propuesta_estrategia_terapeutica(Lista_FRC,LOD,DM,Categoria,Estrategia):-
   length(Lista_FRC,Y),
   (
    Y=0,LOD=false, DM=false,
-   (Categoria="Prehipertensión",estrategia(1,Estrategia),!;
+   (Categoria="Prehipertensiï¿½n",estrategia(1,Estrategia),!;
     Categoria="Grado I",estrategia(4,Estrategia),!;
     Categoria="Grado II",estrategia(5,Estrategia),!;
     Categoria="Grado III",estrategia(6,Estrategia),!)
    ;
    Y<3,LOD=false, DM=false,
-   (Categoria="Prehipertensión",estrategia(2,Estrategia),!;
+   (Categoria="Prehipertensiï¿½n",estrategia(2,Estrategia),!;
     (Categoria="Grado I";Categoria="Grado II"),estrategia(5,Estrategia),!;
     Categoria="Grado III",estrategia(6,Estrategia),!)
    ;
    (Y>=3;LOD=true; DM=true),
-   (Categoria="Prehipertensión",estrategia(3,Estrategia);
+   (Categoria="Prehipertensiï¿½n",estrategia(3,Estrategia);
     (Categoria="Grado I";Categoria="Grado II";Categoria="Grado III"),estrategia(6,Estrategia)
    )
   ).
 
+%Contraindicaciones por farmacos
+%contraind_por_f(L:Lista de enfermedades a las que esta contraindicado,F: Farmaco).
+
+contraind_por_f(['Gota'],'DiurÃ©ticos tiazÃ­dicos').
+contraind_por_f(['Asma','Bloqueo AV grado 2','Bloqueo AV grado 3'],'Betabloqueadores').
+contraind_por_f(['Bloqueo AV grado 2','Bloqueo AV grado 3','Bloqueo trifascicular',
+                          'DisfunciÃ³n del VI grave', 'Insuficiencia cardiaca'],'Antagonistas del calcio-verapamilo').
+contraind_por_f(['Bloqueo AV grado 2','Bloqueo AV grado 3','Bloqueo trifascicular',
+                          'DisfunciÃ³n del VI grave', 'Insuficiencia cardiaca'],'Antagonistas del calcio-dialtiazem').
+contraind_por_f(['Embarazo', 'Angioedema', 'Hiperpotasemia', 'Estenosis arterial renal bilateral'],'IECA').
+contraind_por_f(['Embarazo', 'Hiperpotasemia', 'Estenosis arterial renal bilateral'],'ARA II').
+contraind_por_f(['Insuficiencia renal aguda', 'Insuficiencia renal grave', 'Hiperpotasemia'],'Antagonistas del receptor mineralcorticoideo').
+
+
+%Contraindicaciones absoltas
+%contraindicacion_a(ListaDeSintomas,Farmaco) retorna verdadero(esta contraindicado)
+%en caso de que alguno de los sintomas este contraindicado para el tipo de farmaco
+% Ejemplo:
+%?- contraind_a(['Gota','Asma','Bloqueo AV grado 2','Bloqueo AV grado 3'],F).
+%F = 'DiurÃ©ticos tiazÃ­dicos' ;
+%F = 'Betabloqueadores' ;
+%F = 'Antagonistas del calcio-verapamilo' ;
+%F = 'Antagonistas del calcio-dialtiazem' ;
+%false.
+
+contraind_a(ListaDeSintomas,F):- contraind_por_f(LCpF,F),not(disjuntos(LCpF,ListaDeSintomas)).
+
+%Disjuncion entre conjuntos A y B
+disjuntos([],_).
+disjuntos([X|Ra],B):- memb(X,B),
+                      !,fail;
+                      disjuntos(Ra,B).
+memb(_, []) :- fail.
+memb(X,[X|_R]).
+memb(X,[_H|C]):- memb(X,C).
