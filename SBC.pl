@@ -47,15 +47,15 @@ rcv(FRC,LOD,DM,Categoria,Riesgo):-
    )
   ).
 
+% Tipos de estrategias terapeuticas
+estrategia(1,"Sugerir cambios en el estilo de vida. No intervenir sobre la PA.").
+estrategia(2,"Cambios en el estilo de vida. No intervenir sobre la PA.").
+estrategia(3,"Cambios en el estilo de vida. No intervenir sobre la PA. Considerar trataemiento de LOD.").
+estrategia(4,"Cambios en el estilo de vida durante varios meses, si no control agnadir tratamiento para PA con un objetivo de <140/90.").
+estrategia(5,"Cambios en el estilo de vida durante varias semanas, si no control agnadir tratamiento para PA con un objetivo de <140/90.").
+estrategia(6,"Cambios en el estilo de vida. Tratamiento inmediato para la PA con un objetivo de <140/90. Tratamiento de FRC.").
+
 % Propuesta de estrategia terapeutica segun riesgo cardiovascular
-estrategia(X,Y):-
- X=1,Y="Sugerir cambios en el estilo de vida. No intervenir sobre la PA.";
- X=2,Y="Cambios en el estilo de vida. No intervenir sobre la PA.";
- X=3,Y="Cambios en el estilo de vida. No intervenir sobre la PA. Considerar trataemiento de LOD.";
- X=4,Y="Cambios en el estilo de vida durante varios meses, si no control agnadir tratamiento para PA con un objetivo de <140/90.";
- X=5,Y="Cambios en el estilo de vida durante varias semanas, si no control agnadir tratamiento para PA con un objetivo de <140/90.";
- X=6,Y="Cambios en el estilo de vida. Tratamiento inmediato para la PA con un objetivo de <140/90. Tratamiento de FRC.".
- 
 propuesta_estrategia_terapetica(Lista_FRC,LOD,DM,Categoria,Estrategia):-
   length(Lista_FRC,Y),Y=0,LOD=false, DM=false,
   (Categoria="prehipertension",estrategia(1,Estrategia),!;
