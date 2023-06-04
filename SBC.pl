@@ -26,19 +26,25 @@ categoria(_,_,"Grado III").
 
 % Reglas para la estratificacion del RCV
 rcv(FRC,LOD,DM,Categoria,Riesgo):-
-  length(FRC,Y),Y=0,LOD=false,DM=false,
-  (Categoria="Grado I",Riesgo="Riesgo bajo",!;
-   Categoria="Grado II",Riesgo="Riesgo moderado",!;
-   Categoria="Grado III",Riesgo="Riesgo alto",!
+  length(FRC,Y),
+  (
+   Y=0,LOD=false,DM=false,
+   (
+    Categoria="Grado I",Riesgo="Riesgo bajo",!;
+    Categoria="Grado II",Riesgo="Riesgo moderado",!;
+    Categoria="Grado III",Riesgo="Riesgo alto",!
    );
-  length(FRC,Y),Y<3,LOD=false,DM=false,
-  (Categoria="Prehipertensión",Riesgo="Riesgo bajo",!;
-   (Categoria="Grado I";Categoria="Grado II"),Riesgo="Riesgo moderado",!;
-   Categoria="Grado III",Riesgo="Riesgo alto",!
-  );
-  length(FRC,Y),(Y>=3;LOD=true;DM=true),
-  (Categoria="Prehipertensión",Riesgo="Moderado";
-   (Categoria="Grado I";Categoria="Grado II";Categoria="Grado III"),Riesgo="Riesgo alto"
+   Y<3,LOD=false,DM=false,
+   (
+    Categoria="Prehipertensión",Riesgo="Riesgo bajo",!;
+    (Categoria="Grado I";Categoria="Grado II"),Riesgo="Riesgo moderado",!;
+    Categoria="Grado III",Riesgo="Riesgo alto",!
+   );
+   (Y>=3;LOD=true;DM=true),
+   (
+    Categoria="Prehipertensión",Riesgo="Moderado";
+    (Categoria="Grado I";Categoria="Grado II";Categoria="Grado III"),Riesgo="Riesgo alto"
+   )
   ).
 
 % Propuesta de estrategia terapeutica segun riesgo cardiovascular
