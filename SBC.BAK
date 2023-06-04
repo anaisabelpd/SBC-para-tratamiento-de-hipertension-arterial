@@ -25,8 +25,8 @@ categoria(_,_,"Grado III").
 % RCV riesgo cardiovascular
 
 % Reglas para la estratificacion del RCV
-rcv(FRC,LOD,DM,Categoria,Riesgo):-
-  length(FRC,Y),
+rcv(Lista_FRC,LOD,DM,Categoria,Riesgo):-
+  length(Lista_FRC,Y),
   (
    Y=0,LOD=false,DM=false,
    (
