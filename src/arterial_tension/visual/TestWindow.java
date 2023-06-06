@@ -40,15 +40,14 @@ public class TestWindow extends javax.swing.JFrame {
         btn_mainmenu = new arterial_tension.customs.Button();
         jLabel2 = new javax.swing.JLabel();
         tf_age = new arterial_tension.customs.TextField();
-        tf_weight = new arterial_tension.customs.TextField();
-        tf_height = new arterial_tension.customs.TextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        tf_age1 = new arterial_tension.customs.TextField();
+        tf_ta_sistolica = new arterial_tension.customs.TextField();
         jLabel11 = new javax.swing.JLabel();
-        tf_age2 = new arterial_tension.customs.TextField();
+        tf_ta_diastolica = new arterial_tension.customs.TextField();
+        jLabel12 = new javax.swing.JLabel();
+        rb_coo_13 = new arterial_tension.customs.RadioButton();
+        rb_coo_22 = new arterial_tension.customs.RadioButton();
         jp_coordination = new javax.swing.JPanel();
         jp_footer1 = new javax.swing.JPanel();
         btn_next1 = new arterial_tension.customs.Button();
@@ -59,34 +58,38 @@ public class TestWindow extends javax.swing.JFrame {
         rb_coo_5 = new arterial_tension.customs.RadioButton();
         rb_coo_4 = new arterial_tension.customs.RadioButton();
         jLabel1 = new javax.swing.JLabel();
-        rb_coo_6 = new arterial_tension.customs.RadioButton();
         rb_coo_7 = new arterial_tension.customs.RadioButton();
         rb_coo_8 = new arterial_tension.customs.RadioButton();
         rb_coo_9 = new arterial_tension.customs.RadioButton();
         rb_coo_10 = new arterial_tension.customs.RadioButton();
         rb_coo_11 = new arterial_tension.customs.RadioButton();
-        rb_coo_12 = new arterial_tension.customs.RadioButton();
         jp_flexibility = new javax.swing.JPanel();
         jp_footer2 = new javax.swing.JPanel();
         btn_next2 = new arterial_tension.customs.Button();
         btn_previous2 = new arterial_tension.customs.Button();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
         jLabel6 = new javax.swing.JLabel();
-        rb_fle_1 = new arterial_tension.customs.RadioButton();
-        rb_fle_2 = new arterial_tension.customs.RadioButton();
-        rb_fle_3 = new arterial_tension.customs.RadioButton();
-        rb_fle_4 = new arterial_tension.customs.RadioButton();
-        rb_fle_5 = new arterial_tension.customs.RadioButton();
-        rb_fle_6 = new arterial_tension.customs.RadioButton();
+        rb_coo_14 = new arterial_tension.customs.RadioButton();
+        rb_coo_15 = new arterial_tension.customs.RadioButton();
+        rb_coo_16 = new arterial_tension.customs.RadioButton();
+        rb_coo_17 = new arterial_tension.customs.RadioButton();
+        rb_coo_18 = new arterial_tension.customs.RadioButton();
+        rb_coo_19 = new arterial_tension.customs.RadioButton();
+        rb_coo_20 = new arterial_tension.customs.RadioButton();
+        rb_coo_21 = new arterial_tension.customs.RadioButton();
+        rb_coo_6 = new arterial_tension.customs.RadioButton();
+        rb_coo_12 = new arterial_tension.customs.RadioButton();
         jp_strength = new javax.swing.JPanel();
         jp_footer3 = new javax.swing.JPanel();
         btn_next3 = new arterial_tension.customs.Button();
         btn_previous3 = new arterial_tension.customs.Button();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        tf_repeat = new arterial_tension.customs.TextField();
         jLabel7 = new javax.swing.JLabel();
+        rb_coo_23 = new arterial_tension.customs.RadioButton();
+        rb_coo_24 = new arterial_tension.customs.RadioButton();
+        rb_coo_25 = new arterial_tension.customs.RadioButton();
+        rb_coo_26 = new arterial_tension.customs.RadioButton();
+        rb_coo_27 = new arterial_tension.customs.RadioButton();
+        rb_coo_28 = new arterial_tension.customs.RadioButton();
+        rb_coo_29 = new arterial_tension.customs.RadioButton();
         jp_resistance = new javax.swing.JPanel();
         jp_footer4 = new javax.swing.JPanel();
         btn_finish = new arterial_tension.customs.Button();
@@ -94,13 +97,9 @@ public class TestWindow extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
         jl_msg = new javax.swing.JLabel();
-        tf_pulse1 = new arterial_tension.customs.TextField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        tf_pulse2 = new arterial_tension.customs.TextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle("Condición Física");
+        setTitle("Hipertension Arterial");
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -167,33 +166,12 @@ public class TestWindow extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         jLabel2.setText("Edad");
 
-        tf_age.setToolTipText("Inserte su edad");
+        tf_age.setToolTipText("Inserte su edad(mayor que 18 y menor de 55)");
         tf_age.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 tf_ageKeyReleased(evt);
             }
         });
-
-        tf_weight.setToolTipText("Inserte su peso en kilogramos");
-        tf_weight.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                tf_weightKeyReleased(evt);
-            }
-        });
-
-        tf_height.setToolTipText("Inserte su altura en centímetros");
-        tf_height.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                tf_heightKeyReleased(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel3.setText("Altura (cm)");
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel4.setText("Peso (kg)");
-        jLabel4.setToolTipText("");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         jLabel5.setText("Complete los siguientes campos:");
@@ -201,22 +179,39 @@ public class TestWindow extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         jLabel10.setText("PA Diastólica");
 
-        tf_age1.setToolTipText("Inserte su edad");
-        tf_age1.addKeyListener(new java.awt.event.KeyAdapter() {
+        tf_ta_sistolica.setToolTipText("Inserte la TA Sistolica");
+        tf_ta_sistolica.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                tf_age1KeyReleased(evt);
+                tf_ta_sistolicaKeyReleased(evt);
             }
         });
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         jLabel11.setText("PA Sistólica");
 
-        tf_age2.setToolTipText("Inserte su edad");
-        tf_age2.addKeyListener(new java.awt.event.KeyAdapter() {
+        tf_ta_diastolica.setToolTipText("Inserte la TA Diastolica");
+        tf_ta_diastolica.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                tf_age2KeyReleased(evt);
+                tf_ta_diastolicaKeyReleased(evt);
             }
         });
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        jLabel12.setText("Sexo");
+
+        rb_coo_13.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_13.setText("Hombre");
+        rb_coo_13.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_13.setFocusPainted(false);
+        rb_coo_13.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_13.setIconTextGap(8);
+
+        rb_coo_22.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_22.setText("Mujer");
+        rb_coo_22.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_22.setFocusPainted(false);
+        rb_coo_22.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_22.setIconTextGap(8);
 
         javax.swing.GroupLayout jp_biometricLayout = new javax.swing.GroupLayout(jp_biometric);
         jp_biometric.setLayout(jp_biometricLayout);
@@ -226,26 +221,21 @@ public class TestWindow extends javax.swing.JFrame {
             .addGroup(jp_biometricLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
                     .addGroup(jp_biometricLayout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jp_biometricLayout.createSequentialGroup()
-                        .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_age, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel12)
                             .addComponent(jLabel2)
-                            .addComponent(tf_age, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(tf_height, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                                .addComponent(tf_weight, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
+                            .addComponent(rb_coo_13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(88, 88, 88)
                         .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addComponent(tf_ta_sistolica, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10)
-                            .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(tf_age2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tf_age1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(356, 356, 356))))
+                            .addComponent(tf_ta_diastolica, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(418, 447, Short.MAX_VALUE))
         );
         jp_biometricLayout.setVerticalGroup(
             jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,31 +245,27 @@ public class TestWindow extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel10))
+                    .addComponent(jLabel11))
                 .addGap(18, 18, 18)
                 .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_age, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_age1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_ta_sistolica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_ta_diastolica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jp_biometricLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel11)
-                        .addGap(18, 18, 18)
-                        .addComponent(tf_age2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jp_biometricLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(tf_weight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(tf_height, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                        .addComponent(rb_coo_13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(rb_coo_22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(jp_footer5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        tabbed.addTab("Formulario 1", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_body-scale.png")), jp_biometric); // NOI18N
+        tabbed.addTab("Datos del paciente", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_body-scale.png")), jp_biometric); // NOI18N
 
         jp_coordination.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -319,7 +305,7 @@ public class TestWindow extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_footer1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(btn_previous1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 441, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 459, Short.MAX_VALUE)
                 .addComponent(btn_next1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
@@ -377,15 +363,8 @@ public class TestWindow extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         jLabel1.setText("Seleccione a partir de las enfermedades, situaciones o padecimientos que presenta el paciente:");
 
-        rb_coo_6.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_6.setText("Insuficiencia cardiaca");
-        rb_coo_6.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_6.setFocusPainted(false);
-        rb_coo_6.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_6.setIconTextGap(8);
-
         rb_coo_7.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_7.setText("Embarazo");
+        rb_coo_7.setText("Bloqueo trifascicular");
         rb_coo_7.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
         rb_coo_7.setFocusPainted(false);
         rb_coo_7.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
@@ -419,20 +398,13 @@ public class TestWindow extends javax.swing.JFrame {
         rb_coo_11.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         rb_coo_11.setIconTextGap(8);
 
-        rb_coo_12.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_12.setText("Insuficiencia renal grave");
-        rb_coo_12.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_12.setFocusPainted(false);
-        rb_coo_12.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_12.setIconTextGap(8);
-
         javax.swing.GroupLayout jp_coordinationLayout = new javax.swing.GroupLayout(jp_coordination);
         jp_coordination.setLayout(jp_coordinationLayout);
         jp_coordinationLayout.setHorizontalGroup(
             jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jp_footer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jp_coordinationLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(49, 49, 49)
                 .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_coordinationLayout.createSequentialGroup()
@@ -441,7 +413,6 @@ public class TestWindow extends javax.swing.JFrame {
                             .addComponent(rb_coo_2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(rb_coo_3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(rb_coo_5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(rb_coo_4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(60, 60, 60)
                         .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -449,15 +420,14 @@ public class TestWindow extends javax.swing.JFrame {
                             .addComponent(rb_coo_9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(rb_coo_8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(rb_coo_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(rb_coo_11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jp_coordinationLayout.setVerticalGroup(
             jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_coordinationLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(47, 47, 47)
                 .addComponent(jLabel1)
                 .addGap(12, 12, 12)
                 .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -479,16 +449,12 @@ public class TestWindow extends javax.swing.JFrame {
                 .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rb_coo_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rb_coo_11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addComponent(jp_footer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
         );
 
-        tabbed.addTab("Contraindicaciones", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_equanimity.png")), jp_coordination); // NOI18N
+        tabbed.addTab("Condición Medica", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_equanimity.png")), jp_coordination); // NOI18N
 
         jp_flexibility.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -541,63 +507,78 @@ public class TestWindow extends javax.swing.JFrame {
                     .addComponent(btn_previous2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jScrollPane2.setBorder(null);
-
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jTextArea2.setLineWrap(true);
-        jTextArea2.setRows(6);
-        jTextArea2.setText("Sentarse en el suelo con la espalda recta, las piernas juntas y rectas, los brazos estirados hacia adelante. Los pies se mantienen en ángulo recto. Se inclina la parte superior del cuerpo hacia delante lentamente tanto como se pueda.\nSe comprueba cuál es la posición que se es capaz de mantener sin dolor durante cinco segundos y se observa la distancia que hay entre los dedos de las manos y los dedos de los pies.\n");
-        jTextArea2.setWrapStyleWord(true);
-        jTextArea2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextArea2.setFocusable(false);
-        jScrollPane2.setViewportView(jTextArea2);
-
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel6.setText("Seleccione:");
+        jLabel6.setText("Seleccione a partir de las enfermedades, situaciones o padecimientos que presenta el paciente:");
 
-        bgroup_flexibility.add(rb_fle_1);
-        rb_fle_1.setSelected(true);
-        rb_fle_1.setText("La distancia entre los dedos de las manos y los dedos de los pies es más de un palmo.");
-        rb_fle_1.setActionCommand("Mas de un palmo");
-        rb_fle_1.setFocusPainted(false);
-        rb_fle_1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_fle_1.setIconTextGap(8);
+        rb_coo_14.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_14.setText("Embarazo");
+        rb_coo_14.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_14.setFocusPainted(false);
+        rb_coo_14.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_14.setIconTextGap(8);
 
-        bgroup_flexibility.add(rb_fle_2);
-        rb_fle_2.setText("La distancia es aproximadamente de un palmo.");
-        rb_fle_2.setActionCommand("Aproximadamente un palmo");
-        rb_fle_2.setFocusPainted(false);
-        rb_fle_2.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_fle_2.setIconTextGap(8);
+        rb_coo_15.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_15.setText("Síndrome metabólico");
+        rb_coo_15.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_15.setFocusPainted(false);
+        rb_coo_15.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_15.setIconTextGap(8);
 
-        bgroup_flexibility.add(rb_fle_3);
-        rb_fle_3.setText("La distancia equivale a la longitud del dedo índice.");
-        rb_fle_3.setActionCommand("Longitud del dedo indice");
-        rb_fle_3.setFocusPainted(false);
-        rb_fle_3.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_fle_3.setIconTextGap(8);
+        rb_coo_16.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_16.setText("Intolerancia a la glucosa");
+        rb_coo_16.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_16.setFocusPainted(false);
+        rb_coo_16.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_16.setIconTextGap(8);
 
-        bgroup_flexibility.add(rb_fle_4);
-        rb_fle_4.setText("El dedo índice toca las puntas de los dedos de los pies.");
-        rb_fle_4.setActionCommand("El dedo indice toca la punta de los pies");
-        rb_fle_4.setFocusPainted(false);
-        rb_fle_4.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_fle_4.setIconTextGap(8);
+        rb_coo_17.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_17.setText("Atletas en activo");
+        rb_coo_17.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_17.setFocusPainted(false);
+        rb_coo_17.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_17.setIconTextGap(8);
 
-        bgroup_flexibility.add(rb_fle_5);
-        rb_fle_5.setText("Las puntas de los dedos de las manos se tocan con las puntas de los dedos de los pies.");
-        rb_fle_5.setActionCommand("Las puntas de los dedos de las manos se tocan con las puntas de los dedos de los pies");
-        rb_fle_5.setFocusPainted(false);
-        rb_fle_5.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_fle_5.setIconTextGap(8);
+        rb_coo_18.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_18.setText("EAP");
+        rb_coo_18.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_18.setFocusPainted(false);
+        rb_coo_18.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_18.setIconTextGap(8);
 
-        bgroup_flexibility.add(rb_fle_6);
-        rb_fle_6.setText("Las manos cubren los dedos de los pies en toda su longitud.");
-        rb_fle_6.setActionCommand("Las manos cubren los dedos de los pies");
-        rb_fle_6.setFocusPainted(false);
-        rb_fle_6.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_fle_6.setIconTextGap(8);
+        rb_coo_19.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_19.setText("EPOC");
+        rb_coo_19.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_19.setFocusPainted(false);
+        rb_coo_19.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_19.setIconTextGap(8);
+
+        rb_coo_20.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_20.setText("Bradicardia");
+        rb_coo_20.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_20.setFocusPainted(false);
+        rb_coo_20.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_20.setIconTextGap(8);
+
+        rb_coo_21.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_21.setText("Taquiarritmia");
+        rb_coo_21.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_21.setFocusPainted(false);
+        rb_coo_21.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_21.setIconTextGap(8);
+
+        rb_coo_6.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_6.setText("Insuficiencia cardiaca");
+        rb_coo_6.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_6.setFocusPainted(false);
+        rb_coo_6.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_6.setIconTextGap(8);
+
+        rb_coo_12.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_12.setText("Insuficiencia renal grave");
+        rb_coo_12.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_12.setFocusPainted(false);
+        rb_coo_12.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_12.setIconTextGap(8);
 
         javax.swing.GroupLayout jp_flexibilityLayout = new javax.swing.GroupLayout(jp_flexibility);
         jp_flexibility.setLayout(jp_flexibilityLayout);
@@ -605,51 +586,55 @@ public class TestWindow extends javax.swing.JFrame {
             jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jp_footer2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jp_flexibilityLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(49, 49, 49)
                 .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
                     .addGroup(jp_flexibilityLayout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_flexibilityLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32))
-                    .addGroup(jp_flexibilityLayout.createSequentialGroup()
-                        .addComponent(rb_fle_1, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jp_flexibilityLayout.createSequentialGroup()
-                        .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rb_fle_6, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rb_fle_5, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rb_fle_4, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rb_fle_3, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rb_fle_2, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(rb_coo_18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(60, 60, 60)
+                        .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(rb_coo_12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_coo_20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(rb_coo_21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(rb_coo_19, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(rb_coo_6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         jp_flexibilityLayout.setVerticalGroup(
             jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_flexibilityLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
+                .addGap(47, 47, 47)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rb_fle_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rb_fle_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rb_fle_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rb_fle_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rb_fle_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rb_fle_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
+                .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addComponent(jp_footer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        tabbed.addTab("Fomrulario 3", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_diet.png")), jp_flexibility); // NOI18N
+        tabbed.addTab("Condición Medica", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_diet.png")), jp_flexibility); // NOI18N
 
         jp_strength.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -689,7 +674,7 @@ public class TestWindow extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_footer3Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(btn_previous3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 459, Short.MAX_VALUE)
                 .addComponent(btn_next3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
@@ -702,23 +687,62 @@ public class TestWindow extends javax.swing.JFrame {
                     .addComponent(btn_previous3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jScrollPane3.setBorder(null);
-
-        jTextArea3.setColumns(20);
-        jTextArea3.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jTextArea3.setLineWrap(true);
-        jTextArea3.setRows(9);
-        jTextArea3.setText("Tumbarse de espaldas con las rodillas flexionadas y las plantas de los pies en contacto con el suelo. Los brazos reposan al lado del cuerpo y en contacto con este. Los dedos de las manos apuntan a los pies. Se hace una marca en el suelo en el punto exacto en donde finalizan los dedos de las manos. Luego se hace otra señal a 10 cm del punto anterior y en dirección a los pies. Ahora se tienen que levantar la cabeza y los hombros hasta que se sea capaz de llegar a la segunda marca. Después se vuelve a la posición inicial, pero sin dejar reposar la cabeza en el suelo y manteniendo la tensión abdominal.\nUn movimiento completo dura alrededor de tres segundos. Se repite el ejercicio tantas veces como sea posible.");
-        jTextArea3.setWrapStyleWord(true);
-        jTextArea3.setAlignmentX(0.0F);
-        jTextArea3.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextArea3.setFocusable(false);
-        jScrollPane3.setViewportView(jTextArea3);
-
-        tf_repeat.setToolTipText("Inserte la cantidad de repeticiones");
-
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel7.setText("Complete con la cantidad de repeticiones:");
+        jLabel7.setText("Seleccione a partir de los factores de riesgo que presenta el paciente:");
+
+        rb_coo_23.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_23.setText("Dieta malsana");
+        rb_coo_23.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_23.setFocusPainted(false);
+        rb_coo_23.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_23.setIconTextGap(8);
+
+        rb_coo_24.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_24.setText("Inactividad física");
+        rb_coo_24.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_24.setFocusPainted(false);
+        rb_coo_24.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_24.setIconTextGap(8);
+
+        rb_coo_25.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_25.setText("Consumo de tabaco");
+        rb_coo_25.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_25.setFocusPainted(false);
+        rb_coo_25.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_25.setIconTextGap(8);
+
+        rb_coo_26.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_26.setText("Consumo de alcohol");
+        rb_coo_26.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_26.setFocusPainted(false);
+        rb_coo_26.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_26.setIconTextGap(8);
+
+        rb_coo_27.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_27.setText("Sobrepeso");
+        rb_coo_27.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_27.setFocusPainted(false);
+        rb_coo_27.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_27.setIconTextGap(8);
+
+        rb_coo_28.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_28.setText("Antecedentes familiares");
+        rb_coo_28.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_28.setFocusPainted(false);
+        rb_coo_28.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_28.setIconTextGap(8);
+
+        rb_coo_29.setBackground(new java.awt.Color(102, 255, 0));
+        rb_coo_29.setText("LOD");
+        rb_coo_29.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
+        rb_coo_29.setFocusPainted(false);
+        rb_coo_29.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_coo_29.setIconTextGap(8);
+        rb_coo_29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rb_coo_29ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jp_strengthLayout = new javax.swing.GroupLayout(jp_strength);
         jp_strength.setLayout(jp_strengthLayout);
@@ -726,27 +750,47 @@ public class TestWindow extends javax.swing.JFrame {
             jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jp_footer3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jp_strengthLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tf_repeat, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE))
-                .addGap(32, 32, 32))
+                .addGap(49, 49, 49)
+                .addGroup(jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jp_strengthLayout.createSequentialGroup()
+                            .addComponent(rb_coo_23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(65, 65, 65)
+                            .addComponent(rb_coo_29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(157, 157, 157))
+                        .addComponent(jLabel7))
+                    .addGroup(jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(rb_coo_24, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rb_coo_25, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rb_coo_26, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rb_coo_27, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rb_coo_28, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jp_strengthLayout.setVerticalGroup(
             jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_strengthLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
+                .addGap(47, 47, 47)
                 .addComponent(jLabel7)
-                .addGap(8, 8, 8)
-                .addComponent(tf_repeat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
+                .addGroup(jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_coo_23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rb_coo_29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addComponent(rb_coo_24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(rb_coo_25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(rb_coo_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(rb_coo_27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(rb_coo_28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(jp_footer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        tabbed.addTab("Formulario 4", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_three-dumbell.png")), jp_strength); // NOI18N
+        tabbed.addTab("Factores de riesgo", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_three-dumbell.png")), jp_strength); // NOI18N
 
         jp_resistance.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -814,16 +858,6 @@ public class TestWindow extends javax.swing.JFrame {
 
         jl_msg.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
 
-        tf_pulse1.setToolTipText("Inserte la cantidad de pulsaciones antes de iniciar");
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel8.setText("Pulso antes de iniciar el ejercicio:");
-
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel9.setText("Pulso al finalizar el ejercicio:");
-
-        tf_pulse2.setToolTipText("Inserte la cantidad de pulsaciones al finalizar");
-
         javax.swing.GroupLayout jp_resistanceLayout = new javax.swing.GroupLayout(jp_resistance);
         jp_resistance.setLayout(jp_resistanceLayout);
         jp_resistanceLayout.setHorizontalGroup(
@@ -837,14 +871,7 @@ public class TestWindow extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(jp_resistanceLayout.createSequentialGroup()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jp_resistanceLayout.createSequentialGroup()
-                        .addGroup(jp_resistanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tf_pulse2, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tf_pulse1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jp_resistanceLayout.setVerticalGroup(
             jp_resistanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -853,15 +880,7 @@ public class TestWindow extends javax.swing.JFrame {
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16)
                 .addComponent(jl_msg)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tf_pulse1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tf_pulse2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 169, Short.MAX_VALUE)
                 .addComponent(jp_footer4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -875,7 +894,7 @@ public class TestWindow extends javax.swing.JFrame {
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabbed, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tabbed, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
         );
 
         tabbed.getAccessibleContext().setAccessibleName("Tab");
@@ -919,7 +938,7 @@ public class TestWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_previous3ActionPerformed
 
     private void btn_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_finishActionPerformed
-        actionFinish();
+        //actionFinish();
     }//GEN-LAST:event_btn_finishActionPerformed
 
     private void btn_previous4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_previous4ActionPerformed
@@ -946,46 +965,36 @@ public class TestWindow extends javax.swing.JFrame {
         if (is_biometric_valid()){
             enabled_tabs(true);
             // mostar mensaje con la cantidad de repeticiones a hacer
-            double weight = Double.parseDouble(tf_weight.getText());
-            jl_msg.setText("Dado su peso corporal ("+ weight +"kg), usted debe realizar el ejercicio indicado con "+ repeats(weight) +" repeticiones.");
+//            double weigth = Double.parseDouble(tf_weigth.getText());
+//            jl_msg.setText("Dado su peso corporal ("+ weigth +"kg), usted debe realizar el ejercicio indicado con "+ repeats(weigth) +" repeticiones.");
         }else{
             enabled_tabs(false);
         }
     }//GEN-LAST:event_tf_ageKeyReleased
 
-    private void tf_weightKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_weightKeyReleased
+    private void tf_ta_sistolicaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_ta_sistolicaKeyReleased
         if (is_biometric_valid()){
             enabled_tabs(true);
-            // mostar mensaje con la cantidad de repeticiones a hacer
-            double weight = Double.parseDouble(tf_weight.getText());
-            jl_msg.setText("Dado su peso corporal ("+ weight +"kg), usted debe realizar el ejercicio indicado con "+ repeats(weight) +" repeticiones.");
         }else{
             enabled_tabs(false);
         }
-    }//GEN-LAST:event_tf_weightKeyReleased
-
-    private void tf_heightKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_heightKeyReleased
-        if (is_biometric_valid()){
-            enabled_tabs(true);
-            // mostar mensaje con la cantidad de repeticiones a hacer
-            double weight = Double.parseDouble(tf_weight.getText());
-            jl_msg.setText("Dado su peso corporal ("+ weight +"kg), usted debe realizar el ejercicio indicado con "+ repeats(weight) +" repeticiones.");
-        }else{
-            enabled_tabs(false);
-        }
-    }//GEN-LAST:event_tf_heightKeyReleased
-
-    private void tf_age1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_age1KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_age1KeyReleased
-
-    private void tf_age2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_age2KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_age2KeyReleased
+    }//GEN-LAST:event_tf_ta_sistolicaKeyReleased
 
     private void rb_coo_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_coo_1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rb_coo_1ActionPerformed
+
+    private void tf_ta_diastolicaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_ta_diastolicaKeyReleased
+        if (is_biometric_valid()){
+            enabled_tabs(true);
+        }else{
+            enabled_tabs(false);
+        }
+    }//GEN-LAST:event_tf_ta_diastolicaKeyReleased
+
+    private void rb_coo_29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_coo_29ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rb_coo_29ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1034,38 +1043,38 @@ public class TestWindow extends javax.swing.JFrame {
         }
     }
     
-    private void actionFinish() {
-        double weight = Double.parseDouble(tf_weight.getText());
-        double height = Double.parseDouble(tf_height.getText())/100;
-        if (is_biometric_valid() && is_strenght_valid() && is_resistance_valid()) {
-            // obtener datos insertados 
-            int age = Integer.parseInt(tf_age.getText());
-            String option_coordination = optionSelected(bgroup_coordination);
-            String option_flexibility = optionSelected(bgroup_flexibility);
-            int strenght_repeats = Integer.parseInt(tf_repeat.getText());
-            int heart_rate = heart_rate_difference();
-            // consultar el SBC
-            String[] msg = connect_with_SBC(age, weight, height, option_coordination, option_flexibility, strenght_repeats, heart_rate);
-            // mostar dialogo con resultado
-            ResultDialog rw = new ResultDialog(null, true);
-            rw.setPoints(msg[0]);
-            rw.setMessage(msg[1]);
-            rw.setVisible(true);
-            // accion a realizar
-            if (rw.getAction().equals("menu")){
-                MainWindow mw = new MainWindow();
-                mw.setVisible(true);
-                this.dispose();
-            }else{           
-                clean_fields();
-                tf_age.requestFocus();
-                enabled_tabs(false);
-                tabbed.setSelectedIndex(0);
-            }
-        }else{
-            JOptionPane.showMessageDialog(this, "No ha completado todas las pruebas, compruebe los campos.", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }
+//    private void actionFinish() {
+////        double weigth = Double.parseDouble(tf_weigth.getText());
+////        double height = Double.parseDouble(tf_height.getText())/100;
+//        if (is_biometric_valid() && is_strenght_valid() && is_resistance_valid()) {
+//            // obtener datos insertados 
+//            int age = Integer.parseInt(tf_age.getText());
+//            String option_coordination = optionSelected(bgroup_coordination);
+//            String option_flexibility = optionSelected(bgroup_flexibility);
+//            int strenght_repeats = Integer.parseInt(tf_repeat.getText());
+//            int heart_rate = heart_rate_difference();
+//            // consultar el SBC
+////            String[] msg = connect_with_SBC(age, weigth, height, option_coordination, option_flexibility, strenght_repeats, heart_rate);
+//            // mostar dialogo con resultado
+//            ResultDialog rw = new ResultDialog(null, true);
+////            rw.setPoints(msg[0]);
+////            rw.setMessage(msg[1]);
+//            rw.setVisible(true);
+//            // accion a realizar
+//            if (rw.getAction().equals("menu")){
+//                MainWindow mw = new MainWindow();
+//                mw.setVisible(true);
+//                this.dispose();
+//            }else{           
+//                clean_fields();
+//                tf_age.requestFocus();
+//                enabled_tabs(false);
+//                tabbed.setSelectedIndex(0);
+//            }
+//        }else{
+//            JOptionPane.showMessageDialog(this, "No ha completado todas las pruebas, compruebe los campos.", "Error", JOptionPane.ERROR_MESSAGE);
+//        }
+//    }
     
     private String optionSelected(ButtonGroup button_group){
         ButtonModel selectedButtonModel = button_group.getSelection();
@@ -1078,47 +1087,48 @@ public class TestWindow extends javax.swing.JFrame {
         return pattern.matcher(input).matches();
     }
     
-    private boolean isFloat(String input){
-        String regex = "^\\d+(\\.\\d+)?$";
-        Pattern pattern = Pattern.compile(regex);
-        return pattern.matcher(input).matches();
-    }
+//    private boolean isFloat(String input){
+//        String regex = "^\\d+(\\.\\d+)?$";
+//        Pattern pattern = Pattern.compile(regex);
+//        return pattern.matcher(input).matches();
+//    }
     
     private boolean is_biometric_valid(){
         String age = tf_age.getText();
-        String weight = tf_weight.getText();
-        String height = tf_height.getText();
-        if (isInteger(age) && isFloat(weight) && isFloat(height)){
-            if (Integer.parseInt(age) > 0 && Double.parseDouble(weight) > 0 && Double.parseDouble(height) > 0){
+        String ta_diastolica = tf_ta_diastolica.getText();
+        String ta_sistolica = tf_ta_sistolica.getText();
+        
+        if (isInteger(age) && isInteger(ta_diastolica) && isInteger(ta_sistolica)){
+            if (Integer.parseInt(age) > 0 && Integer.parseInt(ta_diastolica) > 0 && Integer.parseInt(ta_sistolica) > 0){
                 return true;
             }           
         }
         return false;
     }
     
-    private boolean is_strenght_valid(){
-        String repeat = tf_repeat.getText();
-        return isInteger(repeat) && Integer.parseInt(repeat) > 0;
-    }
+//    private boolean is_strenght_valid(){
+//        String repeat = tf_repeat.getText();
+//        return isInteger(repeat) && Integer.parseInt(repeat) > 0;
+//    }
     
-    private boolean is_resistance_valid(){
-        String pulse1 = tf_pulse1.getText();
-        String pulse2 = tf_pulse2.getText();
-        return isInteger(pulse1) && Integer.parseInt(pulse1) > 0
-                && isInteger(pulse2) && Integer.parseInt(pulse2) > 0;
-    }
+//    private boolean is_resistance_valid(){
+//        String pulse1 = tf_pulse1.getText();
+//        String pulse2 = tf_pulse2.getText();
+//        return isInteger(pulse1) && Integer.parseInt(pulse1) > 0
+//                && isInteger(pulse2) && Integer.parseInt(pulse2) > 0;
+//    }
     
-    private int repeats(double weight){
-        int repeat = 0;
-        if (weight <= 60){
-            repeat = 30;
-        }else if(weight <= 80){
-            repeat = 25;
-        }else{
-            repeat = 20;
-        }
-        return repeat;
-    }
+//    private int repeats(double weigth){
+//        int repeat = 0;
+//        if (weigth <= 60){
+//            repeat = 30;
+//        }else if(weigth <= 80){
+//            repeat = 25;
+//        }else{
+//            repeat = 20;
+//        }
+//        return repeat;
+//    }
     
     private void enabled_tabs(boolean enabled){
         tabbed.setEnabledAt(1, enabled);
@@ -1137,29 +1147,29 @@ public class TestWindow extends javax.swing.JFrame {
         }
     }
     
-    private int heart_rate_difference(){
-        int pulse1 = Integer.parseInt(tf_pulse1.getText());
-        int pulse2 =  Integer.parseInt(tf_pulse2.getText());     
-        return (pulse2*2) - (pulse1*2);       
-    }
+//    private int heart_rate_difference(){
+//        int pulse1 = Integer.parseInt(tf_pulse1.getText());
+//        int pulse2 =  Integer.parseInt(tf_pulse2.getText());     
+//        return (pulse2*2) - (pulse1*2);       
+//    }
     
     private void clean_fields(){
         tf_age.setText("");
-        tf_weight.setText("");
-        tf_height.setText("");
+        tf_ta_diastolica.setText("");
+        tf_ta_sistolica.setText("");
         rb_coo_1.setSelected(true);
-        rb_fle_1.setSelected(true);
-        tf_repeat.setText("");
-        tf_pulse1.setText("");
-        tf_pulse2.setText("");       
+//        rb_fle_1.setSelected(true);
+//        tf_repeat.setText("");
+//        tf_pulse1.setText("");
+//        tf_pulse2.setText("");       
     }
     
-    private String[] connect_with_SBC(int age, double weight, double height, String coordination, String flexibility, int strong, int resistence){
+    private String[] connect_with_SBC(int age, double weigth, double height, String coordination, String flexibility, int strong, int resistence){
         String[] files = new String[1];
         files[0] = "src/arterial_tension/SBC.pl";
         Connection c = new Connection(files);
 
-        String[] res = c.condition(age, weight, height, coordination, flexibility, strong, resistence);
+        String[] res = c.condition(age, weigth, height, coordination, flexibility, strong, resistence);
         return res;
     }
 
@@ -1180,19 +1190,12 @@ public class TestWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
     private javax.swing.JLabel jl_msg;
     private javax.swing.JPanel jp_biometric;
@@ -1209,7 +1212,24 @@ public class TestWindow extends javax.swing.JFrame {
     private arterial_tension.customs.RadioButton rb_coo_10;
     private arterial_tension.customs.RadioButton rb_coo_11;
     private arterial_tension.customs.RadioButton rb_coo_12;
+    private arterial_tension.customs.RadioButton rb_coo_13;
+    private arterial_tension.customs.RadioButton rb_coo_14;
+    private arterial_tension.customs.RadioButton rb_coo_15;
+    private arterial_tension.customs.RadioButton rb_coo_16;
+    private arterial_tension.customs.RadioButton rb_coo_17;
+    private arterial_tension.customs.RadioButton rb_coo_18;
+    private arterial_tension.customs.RadioButton rb_coo_19;
     private arterial_tension.customs.RadioButton rb_coo_2;
+    private arterial_tension.customs.RadioButton rb_coo_20;
+    private arterial_tension.customs.RadioButton rb_coo_21;
+    private arterial_tension.customs.RadioButton rb_coo_22;
+    private arterial_tension.customs.RadioButton rb_coo_23;
+    private arterial_tension.customs.RadioButton rb_coo_24;
+    private arterial_tension.customs.RadioButton rb_coo_25;
+    private arterial_tension.customs.RadioButton rb_coo_26;
+    private arterial_tension.customs.RadioButton rb_coo_27;
+    private arterial_tension.customs.RadioButton rb_coo_28;
+    private arterial_tension.customs.RadioButton rb_coo_29;
     private arterial_tension.customs.RadioButton rb_coo_3;
     private arterial_tension.customs.RadioButton rb_coo_4;
     private arterial_tension.customs.RadioButton rb_coo_5;
@@ -1217,21 +1237,10 @@ public class TestWindow extends javax.swing.JFrame {
     private arterial_tension.customs.RadioButton rb_coo_7;
     private arterial_tension.customs.RadioButton rb_coo_8;
     private arterial_tension.customs.RadioButton rb_coo_9;
-    private arterial_tension.customs.RadioButton rb_fle_1;
-    private arterial_tension.customs.RadioButton rb_fle_2;
-    private arterial_tension.customs.RadioButton rb_fle_3;
-    private arterial_tension.customs.RadioButton rb_fle_4;
-    private arterial_tension.customs.RadioButton rb_fle_5;
-    private arterial_tension.customs.RadioButton rb_fle_6;
     private arterial_tension.customs.MaterialTabbed tabbed;
     private arterial_tension.customs.TextField tf_age;
-    private arterial_tension.customs.TextField tf_age1;
-    private arterial_tension.customs.TextField tf_age2;
-    private arterial_tension.customs.TextField tf_height;
-    private arterial_tension.customs.TextField tf_pulse1;
-    private arterial_tension.customs.TextField tf_pulse2;
-    private arterial_tension.customs.TextField tf_repeat;
-    private arterial_tension.customs.TextField tf_weight;
+    private arterial_tension.customs.TextField tf_ta_diastolica;
+    private arterial_tension.customs.TextField tf_ta_sistolica;
     // End of variables declaration//GEN-END:variables
 
 }

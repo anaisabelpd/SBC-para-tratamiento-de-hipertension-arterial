@@ -34,21 +34,21 @@ public class ShadowRenderer {
     public BufferedImage createShadow(final BufferedImage image) {
         int shadowSize = size * 2;
         int srcWidth = image.getWidth();
-        int srcHeight = image.getHeight();
+        int srcheigth = image.getHeight();
         int dstWidth = srcWidth + shadowSize;
-        int dstHeight = srcHeight + shadowSize;
+        int dstheigth = srcheigth + shadowSize;
         int left = size;
         int right = shadowSize - left;
-        int yStop = dstHeight - right;
+        int yStop = dstheigth - right;
         int shadowRgb = color.getRGB() & 0x00FFFFFF;
         int[] aHistory = new int[shadowSize];
         int historyIdx;
         int aSum;
-        BufferedImage dst = new BufferedImage(dstWidth, dstHeight,
+        BufferedImage dst = new BufferedImage(dstWidth, dstheigth,
                 BufferedImage.TYPE_INT_ARGB);
-        int[] dstBuffer = new int[dstWidth * dstHeight];
-        int[] srcBuffer = new int[srcWidth * srcHeight];
-        GraphicsUtilities.getPixels(image, 0, 0, srcWidth, srcHeight, srcBuffer);
+        int[] dstBuffer = new int[dstWidth * dstheigth];
+        int[] srcBuffer = new int[srcWidth * srcheigth];
+        GraphicsUtilities.getPixels(image, 0, 0, srcWidth, srcheigth, srcBuffer);
         int lastPixelOffset = right * dstWidth;
         float hSumDivider = 1.0f / shadowSize;
         float vSumDivider = opacity / shadowSize;
@@ -61,7 +61,7 @@ public class ShadowRenderer {
             vSumLookup[i] = (int) (i * vSumDivider);
         }
         int srcOffset;
-        for (int srcY = 0, dstOffset = left * dstWidth; srcY < srcHeight; srcY++) {
+        for (int srcY = 0, dstOffset = left * dstWidth; srcY < srcheigth; srcY++) {
             for (historyIdx = 0; historyIdx < shadowSize;) {
                 aHistory[historyIdx++] = 0;
             }
@@ -112,7 +112,7 @@ public class ShadowRenderer {
                     historyIdx -= shadowSize;
                 }
             }
-            for (int y = yStop; y < dstHeight; y++, bufferOffset += dstWidth) {
+            for (int y = yStop; y < dstheigth; y++, bufferOffset += dstWidth) {
                 int a = vSumLookup[aSum];
                 dstBuffer[bufferOffset] = a << 24 | shadowRgb;
                 aSum -= aHistory[historyIdx];
@@ -121,7 +121,7 @@ public class ShadowRenderer {
                 }
             }
         }
-        GraphicsUtilities.setPixels(dst, 0, 0, dstWidth, dstHeight, dstBuffer);
+        GraphicsUtilities.setPixels(dst, 0, 0, dstWidth, dstheigth, dstBuffer);
         return dst;
     }
 }
