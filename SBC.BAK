@@ -76,21 +76,21 @@ propuesta_estrategia_terapeutica(Lista_FRC,LOD,DM,Categoria,Estrategia):-
    )
   ).
 
-%Contraindicaciones por farmacos
-%contraind_por_f(L:Lista de enfermedades a las que esta contraindicado,F: Farmaco).
+%Contraindicaciones absolutas por farmacos
+%contraind_abso_por_f(L:Lista de enfermedades a las que esta contraindicado,F: Farmaco).
 
-contraind_por_f(['Gota'],'Diuréticos tiazídicos').
-contraind_por_f(['Asma','Bloqueo AV grado 2','Bloqueo AV grado 3'],'Betabloqueadores').
-contraind_por_f(['Bloqueo AV grado 2','Bloqueo AV grado 3','Bloqueo trifascicular',
+contraind_abso_por_f(['Gota'],'Diuréticos tiazídicos').
+contraind_abso_por_f(['Asma','Bloqueo AV grado 2','Bloqueo AV grado 3'],'Betabloqueadores').
+contraind_abso_por_f(['Bloqueo AV grado 2','Bloqueo AV grado 3','Bloqueo trifascicular',
                           'Disfunción del VI grave', 'Insuficiencia cardiaca'],'Antagonistas del calcio-verapamilo').
-contraind_por_f(['Bloqueo AV grado 2','Bloqueo AV grado 3','Bloqueo trifascicular',
+contraind_abso_por_f(['Bloqueo AV grado 2','Bloqueo AV grado 3','Bloqueo trifascicular',
                           'Disfunción del VI grave', 'Insuficiencia cardiaca'],'Antagonistas del calcio-dialtiazem').
-contraind_por_f(['Embarazo', 'Angioedema', 'Hiperpotasemia', 'Estenosis arterial renal bilateral'],'IECA').
-contraind_por_f(['Embarazo', 'Hiperpotasemia', 'Estenosis arterial renal bilateral'],'ARA II').
-contraind_por_f(['Insuficiencia renal aguda', 'Insuficiencia renal grave', 'Hiperpotasemia'],'Antagonistas del receptor mineralcorticoideo').
+contraind_abso_por_f(['Embarazo', 'Angioedema', 'Hiperpotasemia', 'Estenosis arterial renal bilateral'],'IECA').
+contraind_abso_por_f(['Embarazo', 'Hiperpotasemia', 'Estenosis arterial renal bilateral'],'ARA II').
+contraind_abso_por_f(['Insuficiencia renal aguda', 'Insuficiencia renal grave', 'Hiperpotasemia'],'Antagonistas del receptor mineralcorticoideo').
 
 
-%Contraindicaciones absoltas
+%Contraindicaciones absolutas
 %contraindicacion_a(ListaDeSintomas,Farmaco) retorna verdadero(esta contraindicado)
 %en caso de que alguno de los sintomas este contraindicado para el tipo de farmaco
 % Ejemplo:
@@ -101,7 +101,7 @@ contraind_por_f(['Insuficiencia renal aguda', 'Insuficiencia renal grave', 'Hipe
 %F = 'Antagonistas del calcio-dialtiazem' ;
 %false.
 
-contraind_a(ListaDeSintomas,F):- contraind_por_f(LCpF,F),not(disjuntos(LCpF,ListaDeSintomas)).
+contraind_a(ListaDeSintomas,F):- contraind_abso_por_f(LCpF,F),not(disjuntos(LCpF,ListaDeSintomas)).
 
 %Disjuncion entre conjuntos A y B
 disjuntos([],_).
@@ -112,10 +112,28 @@ memb(_, []) :- fail.
 memb(X,[X|_R]).
 memb(X,[_H|C]):- memb(X,C).
 
+% Devolver las contraindicaciones en una lista
 contraindicaciones([],[]).
 contraindicaciones([X|ListaFRC],[F|Fac]):-
  member(X,L),
  contraind_por_f(L,F),
  contraindicaciones(ListaFRC,Fac),!.
+ 
+% Contraindicaciones relativas por farmacos
+%contraind_rela_por_f(L:Lista de enfermedades a las que esta contraindicado,F: Farmaco).
+contraind_rela_por_f(['Síndrome metabólico','Intolerancia a la glucosa','Embarazo','Hiperpotasemia',
+                       'Hipopotasemia','Atletas en activo'],'Diuréticos tiazídicos').
+contraind_rela_por_f(['Síndrome metabólico','Intolerancia a la glucosa','Atletas en activo',
+                       'EAP','EPOC','Bradicardia'],'Betabloqueadores').
+contraind_rela_por_f(['Mujeres en edad fértil'],'IECA').
+contraind_rela_por_f(['Mujeres en edad fértil'],'ARA II').
+
+%Contraindicaciones relativas
+contraind_r(ListaDeSintomas,F):- contraind_rela_por_f(LCpF,F),not(disjuntos(LCpF,ListaDeSintomas)).
+
+
+ 
+ 
+ 
  
 
