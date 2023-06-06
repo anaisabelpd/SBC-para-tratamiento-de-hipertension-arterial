@@ -111,3 +111,11 @@ disjuntos([X|Ra],B):- memb(X,B),
 memb(_, []) :- fail.
 memb(X,[X|_R]).
 memb(X,[_H|C]):- memb(X,C).
+
+contraindicaciones([],[]).
+contraindicaciones([X|ListaFRC],[F|Fac]):-
+ member(X,L),
+ contraind_por_f(L,F),
+ contraindicaciones(ListaFRC,Fac),!.
+ 
+
