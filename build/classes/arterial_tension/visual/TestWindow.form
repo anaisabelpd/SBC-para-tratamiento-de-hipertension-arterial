@@ -531,7 +531,7 @@
                       <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Gota"/>
-                    <Property name="toolTipText" type="java.lang.String" value="Embarazo"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Gota"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox18ActionPerformed"/>
@@ -640,6 +640,18 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Bloqueo trifascicular"/>
                     <Property name="toolTipText" type="java.lang.String" value="Sobrepeso"/>
+                    <Property name="disabledIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection component="rb_man" name="disabledIcon" type="property"/>
+                    </Property>
+                    <Property name="disabledSelectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection component="rb_man" name="disabledSelectedIcon" type="property"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection component="rb_man" name="icon" type="property"/>
+                    </Property>
+                    <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection component="rb_man" name="selectedIcon" type="property"/>
+                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox27ActionPerformed"/>

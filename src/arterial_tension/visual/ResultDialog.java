@@ -25,7 +25,6 @@ public class ResultDialog extends javax.swing.JDialog {
 
         bg = new javax.swing.JPanel();
         labelPoints = new javax.swing.JLabel();
-        icon = new javax.swing.JLabel();
         btn_again = new arterial_tension.customs.Button();
         jScrollPane3 = new javax.swing.JScrollPane();
         labelMessage = new javax.swing.JTextArea();
@@ -43,12 +42,9 @@ public class ResultDialog extends javax.swing.JDialog {
 
         labelPoints.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelPoints.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelPoints.setText("Puntos");
+        labelPoints.setText("Resultados del análisis:");
 
-        icon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_rated.png"))); // NOI18N
-
-        btn_again.setBackground(new java.awt.Color(0, 102, 255));
+        btn_again.setBackground(new java.awt.Color(102, 255, 0));
         btn_again.setForeground(new java.awt.Color(255, 255, 255));
         btn_again.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_rotate.png"))); // NOI18N
         btn_again.setText("Volver a realizar");
@@ -73,7 +69,7 @@ public class ResultDialog extends javax.swing.JDialog {
         labelMessage.setFocusable(false);
         jScrollPane3.setViewportView(labelMessage);
 
-        btn_mainmenu.setBackground(new java.awt.Color(0, 102, 255));
+        btn_mainmenu.setBackground(new java.awt.Color(102, 255, 0));
         btn_mainmenu.setForeground(new java.awt.Color(255, 255, 255));
         btn_mainmenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_menu.png"))); // NOI18N
         btn_mainmenu.setText("Menú Principal");
@@ -90,38 +86,29 @@ public class ResultDialog extends javax.swing.JDialog {
         bg.setLayout(bgLayout);
         bgLayout.setHorizontalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(btn_mainmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
-                .addComponent(btn_again, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
             .addGroup(bgLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(24, 24, 24)
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(icon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3)
+                    .addGroup(bgLayout.createSequentialGroup()
+                        .addComponent(btn_mainmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_again, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
                     .addComponent(labelPoints, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(32, 32, 32))
+                .addGap(24, 24, 24))
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bgLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(icon, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(bgLayout.createSequentialGroup()
-                        .addComponent(labelPoints)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(51, 51, 51))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn_again, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_mainmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())))
+                .addGap(38, 38, 38)
+                .addComponent(labelPoints)
+                .addGap(68, 68, 68)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_mainmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_again, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -209,7 +196,6 @@ public class ResultDialog extends javax.swing.JDialog {
     private javax.swing.JPanel bg;
     private arterial_tension.customs.Button btn_again;
     private arterial_tension.customs.Button btn_mainmenu;
-    private javax.swing.JLabel icon;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea labelMessage;
     private javax.swing.JLabel labelPoints;

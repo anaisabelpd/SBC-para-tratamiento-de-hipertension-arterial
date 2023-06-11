@@ -11,6 +11,8 @@ import sbc_for_hipertension_tratament_japp.Connection;
 import arterial_tension.customs.Button;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 
 
@@ -355,7 +357,7 @@ public class TestWindow extends javax.swing.JFrame {
 
         jCheckBox18.setBackground(new java.awt.Color(102, 255, 0));
         jCheckBox18.setText("Gota");
-        jCheckBox18.setToolTipText("Embarazo");
+        jCheckBox18.setToolTipText("Gota");
         jCheckBox18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox18ActionPerformed(evt);
@@ -437,6 +439,10 @@ public class TestWindow extends javax.swing.JFrame {
         jCheckBox27.setBackground(new java.awt.Color(102, 255, 0));
         jCheckBox27.setText("Bloqueo trifascicular");
         jCheckBox27.setToolTipText("Sobrepeso");
+        jCheckBox27.setDisabledIcon(rb_man.getDisabledIcon());
+        jCheckBox27.setDisabledSelectedIcon(rb_man.getDisabledSelectedIcon());
+        jCheckBox27.setIcon(rb_man.getIcon());
+        jCheckBox27.setSelectedIcon(rb_man.getSelectedIcon());
         jCheckBox27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox27ActionPerformed(evt);
@@ -1164,12 +1170,12 @@ public class TestWindow extends javax.swing.JFrame {
             int sistolica = Integer.parseInt(tf_ta_sistolica.getText());
             List<String> rmconditons = new ArrayList<>();
             for(JCheckBox checkbox: checkBoxList_rmconditons){
-                rmconditons.add(checkbox.getText());
+                rmconditons.add("'"+checkbox.getText()+"'");
                 //System.out.println(checkbox.getText());
             }
             List<String> rfactors = new ArrayList<>();
             for(JCheckBox checkbox: checkBoxList_rfactors){
-                rfactors.add(checkbox.getText());
+                rfactors.add("'"+checkbox.getText()+"'");
             }
             String option_sex = rb_man.getActionCommand();
             if(rb_woman.isSelected()){
@@ -1188,7 +1194,7 @@ public class TestWindow extends javax.swing.JFrame {
             // mostar dialogo con resultado
             ResultDialog rw = new ResultDialog(null, true);
 //            rw.setPoints(msg[0]);
-//            rw.setMessage(msg[1]);
+            rw.setMessage(msg);
             rw.setVisible(true);
             // accion a realizar
             if (rw.getAction().equals("menu")){
@@ -1315,13 +1321,13 @@ public class TestWindow extends javax.swing.JFrame {
         files[0] = "src/sbc_for_hipertension_tratament_japp/SBC.pl";
         Connection c = new Connection(files);
 
-//        String cat = c.categoria(ta_diastolica, ta_sitolica);
-//        String rcv = c.rcv(r_factors, cat);
-//        String estrategia = c.propuesta_estrategia_terapeutica(r_factors, cat);
-//        String cont_abs = c.contraind_a(m_conditions);
-        String cont_relat = c.contraind_r(m_conditions);
-        String res = "hola";
-        return res;
+        String cat = "Categoria: "+c.categoria(ta_diastolica, ta_sitolica);
+        String rcv = "Riego cardriovascular: "+c.rcv(r_factors, cat);
+        String estrategia = "Estrategia: "+c.propuesta_estrategia_terapeutica(r_factors, cat);
+        String cont_abs = "Contraindiaciones absolutas: "+c.contraind_a(m_conditions);
+        String cont_relat = "Contraindicaiones relativa: "+c.contraind_r(m_conditions);
+        
+        return cat.replaceAll("'", "")+'\n'+rcv.replaceAll("'", "")+'\n'+estrategia.replaceAll("'", "")+'\n'+cont_abs.replaceAll("'", "")+'\n'+cont_relat.replaceAll("'", "");
     }
     
     
