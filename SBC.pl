@@ -28,24 +28,25 @@ categoria(_,_,"Grado III").
 rcv(Lista_FRC,Categoria,Riesgo):-
   length(Lista_FRC,Y),
   (
-   Y=0,memb('LOD',Lista_FRC)=false,memb('DM',Lista_FRC)=false,
+   Y=0,not(member('LOD',Lista_FRC)),not(member('DM',Lista_FRC)),
    (
     Categoria="Grado I",Riesgo="Riesgo bajo",!;
     Categoria="Grado II",Riesgo="Riesgo moderado",!;
     Categoria="Grado III",Riesgo="Riesgo alto",!
    );
-   Y<3,memb('LOD',Lista_FRC)=false,memb('DM',Lista_FRC)=false,
+   Y<3,not(member('LOD',Lista_FRC)),not(member('DM',Lista_FRC)),
    (
     Categoria="Prehipertensión",Riesgo="Riesgo bajo",!;
     (Categoria="Grado I";Categoria="Grado II"),Riesgo="Riesgo moderado",!;
     Categoria="Grado III",Riesgo="Riesgo alto",!
    );
-   (Y>=3;memb('LOD',Lista_FRC)=true;memb('DM',Lista_FRC)=true),
+   (Y>=3,!;member('LOD',Lista_FRC),!;member('DM',Lista_FRC),!),
    (
     Categoria="Prehipertensión",Riesgo="Moderado";
     (Categoria="Grado I";Categoria="Grado II";Categoria="Grado III"),Riesgo="Riesgo alto"
    )
   ).
+
 
 % Tipos de estrategias terapeuticas
 estrategia(1,"Sugerir cambios en el estilo de vida. No intervenir sobre la PA.").
