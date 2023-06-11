@@ -4,20 +4,19 @@
 
 categoria(PAS,PAD,"Hipertensión sistólica aislada"):-
   PAS>=140,PAD<90,!.
-categoria(PAS,PAD,"Normal"):-
-  PAS<120,!;
-  PAD<80,!.
-categoria(PAS,PAD,"Prehipertensión"):-
-  PAS<140,!;
-  PAD<90,!.
-categoria(PAS,PAD,"Grado I"):-
-  PAS<160,!;
-  PAD<100,!.
+categoria(PAS,PAD,"Grado III"):-
+  PAS>=180,!;
+  PAD>=110,!.
 categoria(PAS,PAD,"Grado II"):-
-  PAS<180,!;
-  PAD<110,!.
-categoria(_,_,"Grado III").
-
+  PAS>=160,!;
+  PAD>=100,!.
+categoria(PAS,PAD,"Grado I"):-
+  PAS>=140,!;
+  AD>=90,!.
+categoria(PAS,PAD,"Prehipertensión"):-
+  PAS>=120,!;
+  PAD>=80,!.
+categoria(PAS,PAD,"Normal").
 
 % FAC factores de riesgo cardiovasculares
 % LOD lesion en organo diana
