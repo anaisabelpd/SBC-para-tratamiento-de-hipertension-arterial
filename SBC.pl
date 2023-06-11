@@ -28,7 +28,7 @@ categoria(_,_,"Grado III").
 rcv(Lista_FRC,Categoria,Riesgo):-
   length(Lista_FRC,Y),
   (
-   Y=0,not(member('LOD',Lista_FRC)),not(member('DM',Lista_FRC)),
+   Y=0,
    (
     Categoria="Grado I",Riesgo="Riesgo bajo",!;
     Categoria="Grado II",Riesgo="Riesgo moderado",!;
@@ -40,7 +40,6 @@ rcv(Lista_FRC,Categoria,Riesgo):-
     (Categoria="Grado I";Categoria="Grado II"),Riesgo="Riesgo moderado",!;
     Categoria="Grado III",Riesgo="Riesgo alto",!
    );
-   (Y>=3,!;member('LOD',Lista_FRC),!;member('DM',Lista_FRC),!),
    (
     Categoria="Prehipertensión",Riesgo="Moderado";
     (Categoria="Grado I";Categoria="Grado II";Categoria="Grado III"),Riesgo="Riesgo alto"
