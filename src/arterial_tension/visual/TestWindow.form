@@ -2,9 +2,25 @@
 
 <Form version="1.8" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.ButtonGroup" name="bgroup_coordination">
-    </Component>
-    <Component class="javax.swing.ButtonGroup" name="bgroup_flexibility">
+    <Container class="javax.swing.JInternalFrame" name="jInternalFrame1">
+      <Properties>
+        <Property name="visible" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.ButtonGroup" name="bgroup_sex">
     </Component>
   </NonVisualComponents>
   <Properties>
@@ -59,7 +75,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="tabbed" alignment="1" pref="399" max="32767" attributes="0"/>
+              <Component id="tabbed" alignment="1" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -98,7 +114,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jp_footer5" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
@@ -106,8 +122,8 @@
                                       <Component id="tf_age" max="32767" attributes="0"/>
                                       <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="rb_coo_13" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_22" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="rb_man" max="32767" attributes="0"/>
+                                      <Component id="rb_woman" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -118,14 +134,14 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="418" pref="447" max="32767" attributes="0"/>
+                          <EmptySpace min="418" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -146,12 +162,12 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="tf_ta_diastolica" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="rb_coo_13" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rb_man" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="rb_coo_22" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rb_woman" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="62" max="32767" attributes="0"/>
+                          <EmptySpace pref="61" max="32767" attributes="0"/>
                           <Component id="jp_footer5" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -298,206 +314,17 @@
                     <Property name="text" type="java.lang.String" value="Sexo"/>
                   </Properties>
                 </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_13">
+                <Component class="arterial_tension.customs.RadioButton" name="rb_man">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Hombre"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_22">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Mujer"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Container class="javax.swing.JPanel" name="jp_coordination">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Condici&#xf3;n Medica">
-                    <Property name="tabTitle" type="java.lang.String" value="Condici&#xf3;n Medica"/>
-                    <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/arterial_tension/images/icon_equanimity.png"/>
-                    </Property>
-                  </JTabbedPaneConstraints>
-                </Constraint>
-              </Constraints>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jp_footer1" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jLabel1" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="rb_coo_1" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_3" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_5" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_4" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="rb_coo_10" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_9" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_8" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_7" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_11" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_coo_1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_coo_7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_coo_2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_coo_8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_coo_3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_coo_9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_coo_4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_coo_10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_coo_5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_coo_11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="77" max="32767" attributes="0"/>
-                          <Component id="jp_footer1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Container class="javax.swing.JPanel" name="jp_footer1">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                    </Property>
-                  </Properties>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Component id="btn_previous1" min="-2" pref="118" max="-2" attributes="0"/>
-                              <EmptySpace pref="459" max="32767" attributes="0"/>
-                              <Component id="btn_next1" min="-2" pref="118" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="btn_next1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btn_previous1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="arterial_tension.customs.Button" name="btn_next1">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="0" green="ff" red="66" type="rgb"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                        </Property>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/arterial_tension/images/icon_arrow-right.png"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="Siguiente"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Siguiente prueba"/>
-                        <Property name="focusPainted" type="boolean" value="false"/>
-                        <Property name="horizontalTextPosition" type="int" value="2"/>
-                        <Property name="iconTextGap" type="int" value="12"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_next1ActionPerformed"/>
-                      </Events>
-                    </Component>
-                    <Component class="arterial_tension.customs.Button" name="btn_previous1">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="0" green="ff" red="66" type="rgb"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                        </Property>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/arterial_tension/images/icon_arrow-left.png"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="Anterior"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Prueba anterior"/>
-                        <Property name="focusPainted" type="boolean" value="false"/>
-                        <Property name="iconTextGap" type="int" value="12"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_previous1ActionPerformed"/>
-                      </Events>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_1">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bgroup_sex"/>
                     </Property>
                     <Property name="selected" type="boolean" value="true"/>
-                    <Property name="text" type="java.lang.String" value="Gota"/>
-                    <Property name="actionCommand" type="java.lang.String" value="No mantiene el equilibrio"/>
+                    <Property name="text" type="java.lang.String" value="Hombre"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Hombre"/>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="13" style="0"/>
@@ -505,146 +332,33 @@
                     <Property name="iconTextGap" type="int" value="8"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rb_coo_1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rb_manActionPerformed"/>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="rb_manKeyReleased"/>
                   </Events>
                 </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_2">
+                <Component class="arterial_tension.customs.RadioButton" name="rb_woman">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Asma"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos"/>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="bgroup_sex"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Mujer"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Mujer"/>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="13" style="0"/>
                     </Property>
                     <Property name="iconTextGap" type="int" value="8"/>
                   </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_3">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Bloqueo AV grado II"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio por lo menos diez segundos"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_5">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Disfunci&#xf3;n del VI grave"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_4">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Bloqueo AV grado III"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel1">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Seleccione a partir de las enfermedades, situaciones o padecimientos que presenta el paciente:"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_7">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Bloqueo trifascicular"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_8">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Angioedema"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_9">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Hiperpotasemia"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_10">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Estenosis arterial renal bilateral"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_11">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Insuficiencia renal aguda"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="rb_manKeyReleased"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jp_flexibility">
+            <Container class="javax.swing.JPanel" name="jp_m_condition1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -652,8 +366,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Condici&#xf3;n Medica">
-                    <Property name="tabTitle" type="java.lang.String" value="Condici&#xf3;n Medica"/>
+                  <JTabbedPaneConstraints tabName="Condicion Medica">
+                    <Property name="tabTitle" type="java.lang.String" value="Condicion Medica"/>
                     <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/arterial_tension/images/icon_diet.png"/>
                     </Property>
@@ -666,62 +380,62 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jp_footer2" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="rb_coo_18" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_17" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_14" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_15" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_16" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox21" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox19" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox20" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox22" alignment="0" pref="149" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox18" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="rb_coo_12" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_20" alignment="0" pref="166" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_21" alignment="0" pref="166" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_19" alignment="0" pref="166" max="32767" attributes="0"/>
-                                      <Component id="rb_coo_6" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jCheckBox25" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox24" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox23" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox26" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox27" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="94" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_coo_14" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_coo_20" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox18" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox27" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_coo_15" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_coo_21" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox19" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox26" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_coo_16" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_coo_19" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox20" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox25" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_coo_17" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_coo_6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox21" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox24" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_coo_18" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_coo_12" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox23" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox22" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="77" max="32767" attributes="0"/>
+                          <EmptySpace pref="61" max="32767" attributes="0"/>
                           <Component id="jp_footer2" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -741,7 +455,7 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                               <Component id="btn_previous2" min="-2" pref="118" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="471" max="32767" attributes="0"/>
                               <Component id="btn_next2" min="-2" pref="118" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                           </Group>
@@ -803,157 +517,137 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JLabel" name="jLabel6">
+                <Component class="javax.swing.JLabel" name="jLabel13">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="13" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Seleccione a partir de las enfermedades, situaciones o padecimientos que presenta el paciente:"/>
+                    <Property name="text" type="java.lang.String" value="Seleccione a partir de los factores de riesgo que presenta el paciente:"/>
                   </Properties>
                 </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_14">
+                <Component class="javax.swing.JCheckBox" name="jCheckBox18">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Embarazo"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
+                    <Property name="text" type="java.lang.String" value="Gota"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Embarazo"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox18ActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_15">
+                <Component class="javax.swing.JCheckBox" name="jCheckBox19">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="S&#xed;ndrome metab&#xf3;lico"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
+                    <Property name="text" type="java.lang.String" value="Asma"/>
+                    <Property name="toolTipText" type="java.lang.String" value="S&#xed;ndrome metab&#xf3;lico"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox19ActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_16">
+                <Component class="javax.swing.JCheckBox" name="jCheckBox20">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Intolerancia a la glucosa"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
+                    <Property name="text" type="java.lang.String" value="Bloqueo AV grado II"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de tabaco"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox20ActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_17">
+                <Component class="javax.swing.JCheckBox" name="jCheckBox21">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Atletas en activo"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
+                    <Property name="text" type="java.lang.String" value="Bloqueo AV grado III"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de alcohol"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox21ActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_18">
+                <Component class="javax.swing.JCheckBox" name="jCheckBox22">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="EAP"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
+                    <Property name="text" type="java.lang.String" value="Disfunci&#xf3;n del VI grave"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de alcohol"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox22ActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_19">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="EPOC"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_20">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Bradicardia"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_21">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Taquiarritmia"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_6">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Insuficiencia cardiaca"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_12">
+                <Component class="javax.swing.JCheckBox" name="jCheckBox23">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Insuficiencia renal grave"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de alcohol"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox23ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox24">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Estenosis arterial renal bilateral"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de alcohol"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox24ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox25">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Hiperpotasemia"/>
+                    <Property name="toolTipText" type="java.lang.String" value="LOD"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox25ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox26">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Angioedema"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Antecedentes familiares"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox26ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox27">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Bloqueo trifascicular"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Sobrepeso"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox27ActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jp_strength">
+            <Container class="javax.swing.JPanel" name="jp_mcondition2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -961,8 +655,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Factores de riesgo">
-                    <Property name="tabTitle" type="java.lang.String" value="Factores de riesgo"/>
+                  <JTabbedPaneConstraints tabName="Condicion Medica">
+                    <Property name="tabTitle" type="java.lang.String" value="Condicion Medica"/>
                     <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/arterial_tension/images/icon_three-dumbell.png"/>
                     </Property>
@@ -975,23 +669,25 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jp_footer3" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="rb_coo_23" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                                      <Component id="rb_coo_29" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
+                              <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="jCheckBox11" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox9" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox10" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox16" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox8" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="rb_coo_24" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="rb_coo_25" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="rb_coo_26" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="rb_coo_27" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="rb_coo_28" alignment="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jCheckBox17" alignment="0" pref="149" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox15" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox12" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox13" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox14" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -1001,24 +697,34 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rb_coo_23" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rb_coo_29" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox14" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="rb_coo_24" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="rb_coo_25" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="rb_coo_26" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="rb_coo_27" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="rb_coo_28" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="42" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBox9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox13" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBox10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox12" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBox11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox15" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBox17" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="61" max="32767" attributes="0"/>
                           <Component id="jp_footer3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1038,7 +744,7 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                               <Component id="btn_previous3" min="-2" pref="118" max="-2" attributes="0"/>
-                              <EmptySpace pref="459" max="32767" attributes="0"/>
+                              <EmptySpace pref="471" max="32767" attributes="0"/>
                               <Component id="btn_next3" min="-2" pref="118" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                           </Group>
@@ -1100,7 +806,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JLabel" name="jLabel7">
+                <Component class="javax.swing.JLabel" name="jLabel9">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="13" style="1"/>
@@ -1108,105 +814,124 @@
                     <Property name="text" type="java.lang.String" value="Seleccione a partir de los factores de riesgo que presenta el paciente:"/>
                   </Properties>
                 </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_23">
+                <Component class="javax.swing.JCheckBox" name="jCheckBox8">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="ff" red="66" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Dieta malsana"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_24">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Inactividad f&#xed;sica"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_25">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Consumo de tabaco"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_26">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Consumo de alcohol"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_27">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Sobrepeso"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_28">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Antecedentes familiares"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
-                  </Properties>
-                </Component>
-                <Component class="arterial_tension.customs.RadioButton" name="rb_coo_29">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="ff" red="66" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="LOD"/>
-                    <Property name="actionCommand" type="java.lang.String" value="Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza"/>
-                    <Property name="focusPainted" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="13" style="0"/>
-                    </Property>
-                    <Property name="iconTextGap" type="int" value="8"/>
+                    <Property name="text" type="java.lang.String" value="Embarazo"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Embarazo"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rb_coo_29ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox8ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox9">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="S&#xed;ndrome metab&#xf3;lico"/>
+                    <Property name="toolTipText" type="java.lang.String" value="S&#xed;ndrome metab&#xf3;lico"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox9ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox10">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Intolerancia a la glucosa"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de tabaco"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox10ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox11">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Atletas en activo"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de alcohol"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox11ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox12">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Taquiarritmia"/>
+                    <Property name="toolTipText" type="java.lang.String" value="LOD"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox12ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox13">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Bradicardia"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Antecedentes familiares"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox13ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox14">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="EAP"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Sobrepeso"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox14ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox15">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Insuficiencia cardiaca"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de alcohol"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox15ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox16">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="EPOC"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de alcohol"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox16ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox17">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Insuficiencia renal grave"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de alcohol"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox17ActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -1219,8 +944,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Formulario 5">
-                    <Property name="tabTitle" type="java.lang.String" value="Formulario 5"/>
+                  <JTabbedPaneConstraints tabName="Factores de riesgo">
+                    <Property name="tabTitle" type="java.lang.String" value="Factores de riesgo"/>
                     <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/arterial_tension/images/icon_run.png"/>
                     </Property>
@@ -1234,27 +959,61 @@
                       <Component id="jp_footer4" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="jl_msg" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jl_msg" max="32767" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="jScrollPane4" min="-2" pref="661" max="-2" attributes="0"/>
-                                  <EmptySpace min="32" max="32767" attributes="0"/>
+                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jCheckBox2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox3" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox6" alignment="0" pref="149" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox1" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jCheckBox5" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox4" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox_LOD" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox_DM" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox_LOD" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBox6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox_DM" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                           <Component id="jl_msg" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="169" max="32767" attributes="0"/>
+                          <EmptySpace pref="55" max="32767" attributes="0"/>
                           <Component id="jp_footer4" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1274,7 +1033,7 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                               <Component id="btn_previous4" min="-2" pref="118" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="471" max="32767" attributes="0"/>
                               <Component id="btn_finish" min="-2" pref="118" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                           </Group>
@@ -1336,43 +1095,116 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane4">
-                  <Properties>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="null"/>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                  </AuxValues>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                  <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea4">
-                      <Properties>
-                        <Property name="columns" type="int" value="20"/>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Segoe UI" size="13" style="0"/>
-                        </Property>
-                        <Property name="lineWrap" type="boolean" value="true"/>
-                        <Property name="rows" type="int" value="6"/>
-                        <Property name="text" type="java.lang.String" value="Lo primero que se debe hacer es tomarse el pulso. Para ello se cuentan los latidos en una mu&#xf1;eca durante 30 segundos. A continuaci&#xf3;n, hay que colocarse ante un escal&#xf3;n doble -unos 35 cm de altura- para subirlo y bajarlo con una pierna. Tras tres minutos se cambia la pierna. &#xa;Tras finalizar el ejercicio se mide de nuevo el pulso. De este segundo resultado se resta el valor del pulso en reposo.&#xa;"/>
-                        <Property name="wrapStyleWord" type="boolean" value="true"/>
-                        <Property name="alignmentX" type="float" value="0.0"/>
-                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                          <Color id="Text Cursor"/>
-                        </Property>
-                        <Property name="focusable" type="boolean" value="false"/>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
                 <Component class="javax.swing.JLabel" name="jl_msg">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="13" style="1"/>
                     </Property>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel8">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="13" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Seleccione a partir de los factores de riesgo que presenta el paciente:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Dieta malsana"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Dieta malsana"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Inactividad f&#xed;sica"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Inactividad f&#xed;sica"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox2ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Consumo de tabaco"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de tabaco"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox3ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Antecedentes familiares"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Antecedentes familiares"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox4ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Sobrepeso"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Sobrepeso"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox5ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox6">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Consumo de alcohol"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de alcohol"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox6ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox_LOD">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="LOD"/>
+                    <Property name="toolTipText" type="java.lang.String" value="LOD"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox_LODActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox_DM">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="ff" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Diabetis mellitus"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Consumo de alcohol"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox_DMActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

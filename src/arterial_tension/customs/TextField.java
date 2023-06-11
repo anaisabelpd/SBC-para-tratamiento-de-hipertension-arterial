@@ -86,7 +86,7 @@ public class TextField extends JTextField {
         }
 
         @Override
-        public void paintBorder(Component cmpnt, Graphics grphcs, int x, int y, int width, int heigth) {
+        public void paintBorder(Component cmpnt, Graphics grphcs, int x, int y, int width, int height) {
             Graphics2D g2 = (Graphics2D) grphcs.create();
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             if (cmpnt.isFocusOwner()) {
@@ -94,7 +94,7 @@ public class TextField extends JTextField {
             } else {
                 g2.setColor(color);
             }
-            g2.drawRoundRect(x, y, width - 1, heigth - 1, round, round);
+            g2.drawRoundRect(x, y, width - 1, height - 1, round, round);
             g2.dispose();
         }
     }

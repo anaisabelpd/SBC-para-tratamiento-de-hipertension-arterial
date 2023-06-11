@@ -9,9 +9,15 @@ import javax.swing.ButtonModel;
 import javax.swing.JOptionPane;
 import sbc_for_hipertension_tratament_japp.Connection;
 import arterial_tension.customs.Button;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JCheckBox;
+
 
 public class TestWindow extends javax.swing.JFrame {
-
+    List<JCheckBox> checkBoxList_rfactors = new ArrayList<>();
+    List<JCheckBox> checkBoxList_rmconditons = new ArrayList<>();
+    
     public TestWindow() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -30,8 +36,8 @@ public class TestWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bgroup_coordination = new javax.swing.ButtonGroup();
-        bgroup_flexibility = new javax.swing.ButtonGroup();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        bgroup_sex = new javax.swing.ButtonGroup();
         bg = new javax.swing.JPanel();
         tabbed = new arterial_tension.customs.MaterialTabbed();
         jp_biometric = new javax.swing.JPanel();
@@ -46,57 +52,65 @@ public class TestWindow extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         tf_ta_diastolica = new arterial_tension.customs.TextField();
         jLabel12 = new javax.swing.JLabel();
-        rb_coo_13 = new arterial_tension.customs.RadioButton();
-        rb_coo_22 = new arterial_tension.customs.RadioButton();
-        jp_coordination = new javax.swing.JPanel();
-        jp_footer1 = new javax.swing.JPanel();
-        btn_next1 = new arterial_tension.customs.Button();
-        btn_previous1 = new arterial_tension.customs.Button();
-        rb_coo_1 = new arterial_tension.customs.RadioButton();
-        rb_coo_2 = new arterial_tension.customs.RadioButton();
-        rb_coo_3 = new arterial_tension.customs.RadioButton();
-        rb_coo_5 = new arterial_tension.customs.RadioButton();
-        rb_coo_4 = new arterial_tension.customs.RadioButton();
-        jLabel1 = new javax.swing.JLabel();
-        rb_coo_7 = new arterial_tension.customs.RadioButton();
-        rb_coo_8 = new arterial_tension.customs.RadioButton();
-        rb_coo_9 = new arterial_tension.customs.RadioButton();
-        rb_coo_10 = new arterial_tension.customs.RadioButton();
-        rb_coo_11 = new arterial_tension.customs.RadioButton();
-        jp_flexibility = new javax.swing.JPanel();
+        rb_man = new arterial_tension.customs.RadioButton();
+        rb_woman = new arterial_tension.customs.RadioButton();
+        jp_m_condition1 = new javax.swing.JPanel();
         jp_footer2 = new javax.swing.JPanel();
         btn_next2 = new arterial_tension.customs.Button();
         btn_previous2 = new arterial_tension.customs.Button();
-        jLabel6 = new javax.swing.JLabel();
-        rb_coo_14 = new arterial_tension.customs.RadioButton();
-        rb_coo_15 = new arterial_tension.customs.RadioButton();
-        rb_coo_16 = new arterial_tension.customs.RadioButton();
-        rb_coo_17 = new arterial_tension.customs.RadioButton();
-        rb_coo_18 = new arterial_tension.customs.RadioButton();
-        rb_coo_19 = new arterial_tension.customs.RadioButton();
-        rb_coo_20 = new arterial_tension.customs.RadioButton();
-        rb_coo_21 = new arterial_tension.customs.RadioButton();
-        rb_coo_6 = new arterial_tension.customs.RadioButton();
-        rb_coo_12 = new arterial_tension.customs.RadioButton();
-        jp_strength = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jCheckBox18 = new javax.swing.JCheckBox();
+        jCheckBox19 = new javax.swing.JCheckBox();
+        jCheckBox20 = new javax.swing.JCheckBox();
+        jCheckBox21 = new javax.swing.JCheckBox();
+        jCheckBox22 = new javax.swing.JCheckBox();
+        jCheckBox23 = new javax.swing.JCheckBox();
+        jCheckBox24 = new javax.swing.JCheckBox();
+        jCheckBox25 = new javax.swing.JCheckBox();
+        jCheckBox26 = new javax.swing.JCheckBox();
+        jCheckBox27 = new javax.swing.JCheckBox();
+        jp_mcondition2 = new javax.swing.JPanel();
         jp_footer3 = new javax.swing.JPanel();
         btn_next3 = new arterial_tension.customs.Button();
         btn_previous3 = new arterial_tension.customs.Button();
-        jLabel7 = new javax.swing.JLabel();
-        rb_coo_23 = new arterial_tension.customs.RadioButton();
-        rb_coo_24 = new arterial_tension.customs.RadioButton();
-        rb_coo_25 = new arterial_tension.customs.RadioButton();
-        rb_coo_26 = new arterial_tension.customs.RadioButton();
-        rb_coo_27 = new arterial_tension.customs.RadioButton();
-        rb_coo_28 = new arterial_tension.customs.RadioButton();
-        rb_coo_29 = new arterial_tension.customs.RadioButton();
+        jLabel9 = new javax.swing.JLabel();
+        jCheckBox8 = new javax.swing.JCheckBox();
+        jCheckBox9 = new javax.swing.JCheckBox();
+        jCheckBox10 = new javax.swing.JCheckBox();
+        jCheckBox11 = new javax.swing.JCheckBox();
+        jCheckBox12 = new javax.swing.JCheckBox();
+        jCheckBox13 = new javax.swing.JCheckBox();
+        jCheckBox14 = new javax.swing.JCheckBox();
+        jCheckBox15 = new javax.swing.JCheckBox();
+        jCheckBox16 = new javax.swing.JCheckBox();
+        jCheckBox17 = new javax.swing.JCheckBox();
         jp_resistance = new javax.swing.JPanel();
         jp_footer4 = new javax.swing.JPanel();
         btn_finish = new arterial_tension.customs.Button();
         btn_previous4 = new arterial_tension.customs.Button();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
         jl_msg = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jCheckBox6 = new javax.swing.JCheckBox();
+        jCheckBox_LOD = new javax.swing.JCheckBox();
+        jCheckBox_DM = new javax.swing.JCheckBox();
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Hipertension Arterial");
@@ -199,19 +213,37 @@ public class TestWindow extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         jLabel12.setText("Sexo");
 
-        rb_coo_13.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_13.setText("Hombre");
-        rb_coo_13.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_13.setFocusPainted(false);
-        rb_coo_13.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_13.setIconTextGap(8);
+        rb_man.setBackground(new java.awt.Color(102, 255, 0));
+        bgroup_sex.add(rb_man);
+        rb_man.setSelected(true);
+        rb_man.setText("Hombre");
+        rb_man.setToolTipText("Hombre");
+        rb_man.setFocusPainted(false);
+        rb_man.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_man.setIconTextGap(8);
+        rb_man.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rb_manActionPerformed(evt);
+            }
+        });
+        rb_man.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                rb_manKeyReleased(evt);
+            }
+        });
 
-        rb_coo_22.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_22.setText("Mujer");
-        rb_coo_22.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_22.setFocusPainted(false);
-        rb_coo_22.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_22.setIconTextGap(8);
+        rb_woman.setBackground(new java.awt.Color(102, 255, 0));
+        bgroup_sex.add(rb_woman);
+        rb_woman.setText("Mujer");
+        rb_woman.setToolTipText("Mujer");
+        rb_woman.setFocusPainted(false);
+        rb_woman.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        rb_woman.setIconTextGap(8);
+        rb_woman.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                rb_manKeyReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout jp_biometricLayout = new javax.swing.GroupLayout(jp_biometric);
         jp_biometric.setLayout(jp_biometricLayout);
@@ -219,7 +251,7 @@ public class TestWindow extends javax.swing.JFrame {
             jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jp_footer5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jp_biometricLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
+                .addGap(90, 90, 90)
                 .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addGroup(jp_biometricLayout.createSequentialGroup()
@@ -227,20 +259,20 @@ public class TestWindow extends javax.swing.JFrame {
                             .addComponent(tf_age, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel12)
                             .addComponent(jLabel2)
-                            .addComponent(rb_coo_13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(rb_man, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rb_woman, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(88, 88, 88)
                         .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
                             .addComponent(tf_ta_sistolica, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10)
                             .addComponent(tf_ta_diastolica, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(418, 447, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jp_biometricLayout.setVerticalGroup(
             jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_biometricLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addGap(48, 48, 48)
                 .addComponent(jLabel5)
                 .addGap(12, 12, 12)
                 .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -258,205 +290,16 @@ public class TestWindow extends javax.swing.JFrame {
                 .addGroup(jp_biometricLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tf_ta_diastolica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jp_biometricLayout.createSequentialGroup()
-                        .addComponent(rb_coo_13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(rb_man, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rb_coo_22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                        .addComponent(rb_woman, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(jp_footer5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         tabbed.addTab("Datos del paciente", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_body-scale.png")), jp_biometric); // NOI18N
 
-        jp_coordination.setBackground(new java.awt.Color(255, 255, 255));
-
-        jp_footer1.setBackground(new java.awt.Color(255, 255, 255));
-
-        btn_next1.setBackground(new java.awt.Color(102, 255, 0));
-        btn_next1.setForeground(new java.awt.Color(255, 255, 255));
-        btn_next1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_arrow-right.png"))); // NOI18N
-        btn_next1.setText("Siguiente");
-        btn_next1.setToolTipText("Siguiente prueba");
-        btn_next1.setFocusPainted(false);
-        btn_next1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        btn_next1.setIconTextGap(12);
-        btn_next1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_next1ActionPerformed(evt);
-            }
-        });
-
-        btn_previous1.setBackground(new java.awt.Color(102, 255, 0));
-        btn_previous1.setForeground(new java.awt.Color(255, 255, 255));
-        btn_previous1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_arrow-left.png"))); // NOI18N
-        btn_previous1.setText("Anterior");
-        btn_previous1.setToolTipText("Prueba anterior");
-        btn_previous1.setFocusPainted(false);
-        btn_previous1.setIconTextGap(12);
-        btn_previous1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_previous1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jp_footer1Layout = new javax.swing.GroupLayout(jp_footer1);
-        jp_footer1.setLayout(jp_footer1Layout);
-        jp_footer1Layout.setHorizontalGroup(
-            jp_footer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_footer1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(btn_previous1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 459, Short.MAX_VALUE)
-                .addComponent(btn_next1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
-        );
-        jp_footer1Layout.setVerticalGroup(
-            jp_footer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_footer1Layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(jp_footer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_next1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_previous1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0))
-        );
-
-        rb_coo_1.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_1.setSelected(true);
-        rb_coo_1.setText("Gota");
-        rb_coo_1.setActionCommand("No mantiene el equilibrio");
-        rb_coo_1.setFocusPainted(false);
-        rb_coo_1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_1.setIconTextGap(8);
-        rb_coo_1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rb_coo_1ActionPerformed(evt);
-            }
-        });
-
-        rb_coo_2.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_2.setText("Asma");
-        rb_coo_2.setActionCommand("Mantiene el equilibrio al menos cinco segundos");
-        rb_coo_2.setFocusPainted(false);
-        rb_coo_2.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_2.setIconTextGap(8);
-
-        rb_coo_3.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_3.setText("Bloqueo AV grado II");
-        rb_coo_3.setActionCommand("Mantiene el equilibrio por lo menos diez segundos");
-        rb_coo_3.setFocusPainted(false);
-        rb_coo_3.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_3.setIconTextGap(8);
-
-        rb_coo_5.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_5.setText("Disfunción del VI grave");
-        rb_coo_5.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_5.setFocusPainted(false);
-        rb_coo_5.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_5.setIconTextGap(8);
-
-        rb_coo_4.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_4.setText("Bloqueo AV grado III");
-        rb_coo_4.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados");
-        rb_coo_4.setFocusPainted(false);
-        rb_coo_4.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_4.setIconTextGap(8);
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel1.setText("Seleccione a partir de las enfermedades, situaciones o padecimientos que presenta el paciente:");
-
-        rb_coo_7.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_7.setText("Bloqueo trifascicular");
-        rb_coo_7.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_7.setFocusPainted(false);
-        rb_coo_7.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_7.setIconTextGap(8);
-
-        rb_coo_8.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_8.setText("Angioedema");
-        rb_coo_8.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_8.setFocusPainted(false);
-        rb_coo_8.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_8.setIconTextGap(8);
-
-        rb_coo_9.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_9.setText("Hiperpotasemia");
-        rb_coo_9.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_9.setFocusPainted(false);
-        rb_coo_9.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_9.setIconTextGap(8);
-
-        rb_coo_10.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_10.setText("Estenosis arterial renal bilateral");
-        rb_coo_10.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_10.setFocusPainted(false);
-        rb_coo_10.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_10.setIconTextGap(8);
-
-        rb_coo_11.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_11.setText("Insuficiencia renal aguda");
-        rb_coo_11.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_11.setFocusPainted(false);
-        rb_coo_11.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_11.setIconTextGap(8);
-
-        javax.swing.GroupLayout jp_coordinationLayout = new javax.swing.GroupLayout(jp_coordination);
-        jp_coordination.setLayout(jp_coordinationLayout);
-        jp_coordinationLayout.setHorizontalGroup(
-            jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_footer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jp_coordinationLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_coordinationLayout.createSequentialGroup()
-                        .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(rb_coo_1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(60, 60, 60)
-                        .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(rb_coo_10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jp_coordinationLayout.setVerticalGroup(
-            jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_coordinationLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jLabel1)
-                .addGap(12, 12, 12)
-                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jp_coordinationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-                .addComponent(jp_footer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
-        );
-
-        tabbed.addTab("Condición Medica", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_equanimity.png")), jp_coordination); // NOI18N
-
-        jp_flexibility.setBackground(new java.awt.Color(255, 255, 255));
+        jp_m_condition1.setBackground(new java.awt.Color(255, 255, 255));
 
         jp_footer2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -494,7 +337,7 @@ public class TestWindow extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_footer2Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(btn_previous2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 471, Short.MAX_VALUE)
                 .addComponent(btn_next2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
@@ -507,136 +350,156 @@ public class TestWindow extends javax.swing.JFrame {
                     .addComponent(btn_previous2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel6.setText("Seleccione a partir de las enfermedades, situaciones o padecimientos que presenta el paciente:");
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        jLabel13.setText("Seleccione a partir de los factores de riesgo que presenta el paciente:");
 
-        rb_coo_14.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_14.setText("Embarazo");
-        rb_coo_14.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_14.setFocusPainted(false);
-        rb_coo_14.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_14.setIconTextGap(8);
+        jCheckBox18.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox18.setText("Gota");
+        jCheckBox18.setToolTipText("Embarazo");
+        jCheckBox18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox18ActionPerformed(evt);
+            }
+        });
 
-        rb_coo_15.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_15.setText("Síndrome metabólico");
-        rb_coo_15.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_15.setFocusPainted(false);
-        rb_coo_15.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_15.setIconTextGap(8);
+        jCheckBox19.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox19.setText("Asma");
+        jCheckBox19.setToolTipText("Síndrome metabólico");
+        jCheckBox19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox19ActionPerformed(evt);
+            }
+        });
 
-        rb_coo_16.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_16.setText("Intolerancia a la glucosa");
-        rb_coo_16.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_16.setFocusPainted(false);
-        rb_coo_16.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_16.setIconTextGap(8);
+        jCheckBox20.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox20.setText("Bloqueo AV grado II");
+        jCheckBox20.setToolTipText("Consumo de tabaco");
+        jCheckBox20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox20ActionPerformed(evt);
+            }
+        });
 
-        rb_coo_17.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_17.setText("Atletas en activo");
-        rb_coo_17.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_17.setFocusPainted(false);
-        rb_coo_17.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_17.setIconTextGap(8);
+        jCheckBox21.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox21.setText("Bloqueo AV grado III");
+        jCheckBox21.setToolTipText("Consumo de alcohol");
+        jCheckBox21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox21ActionPerformed(evt);
+            }
+        });
 
-        rb_coo_18.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_18.setText("EAP");
-        rb_coo_18.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_18.setFocusPainted(false);
-        rb_coo_18.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_18.setIconTextGap(8);
+        jCheckBox22.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox22.setText("Disfunción del VI grave");
+        jCheckBox22.setToolTipText("Consumo de alcohol");
+        jCheckBox22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox22ActionPerformed(evt);
+            }
+        });
 
-        rb_coo_19.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_19.setText("EPOC");
-        rb_coo_19.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_19.setFocusPainted(false);
-        rb_coo_19.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_19.setIconTextGap(8);
+        jCheckBox23.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox23.setText("Insuficiencia renal grave");
+        jCheckBox23.setToolTipText("Consumo de alcohol");
+        jCheckBox23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox23ActionPerformed(evt);
+            }
+        });
 
-        rb_coo_20.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_20.setText("Bradicardia");
-        rb_coo_20.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_20.setFocusPainted(false);
-        rb_coo_20.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_20.setIconTextGap(8);
+        jCheckBox24.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox24.setText("Estenosis arterial renal bilateral");
+        jCheckBox24.setToolTipText("Consumo de alcohol");
+        jCheckBox24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox24ActionPerformed(evt);
+            }
+        });
 
-        rb_coo_21.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_21.setText("Taquiarritmia");
-        rb_coo_21.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_21.setFocusPainted(false);
-        rb_coo_21.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_21.setIconTextGap(8);
+        jCheckBox25.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox25.setText("Hiperpotasemia");
+        jCheckBox25.setToolTipText("LOD");
+        jCheckBox25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox25ActionPerformed(evt);
+            }
+        });
 
-        rb_coo_6.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_6.setText("Insuficiencia cardiaca");
-        rb_coo_6.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_6.setFocusPainted(false);
-        rb_coo_6.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_6.setIconTextGap(8);
+        jCheckBox26.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox26.setText("Angioedema");
+        jCheckBox26.setToolTipText("Antecedentes familiares");
+        jCheckBox26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox26ActionPerformed(evt);
+            }
+        });
 
-        rb_coo_12.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_12.setText("Insuficiencia renal grave");
-        rb_coo_12.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_12.setFocusPainted(false);
-        rb_coo_12.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_12.setIconTextGap(8);
+        jCheckBox27.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox27.setText("Bloqueo trifascicular");
+        jCheckBox27.setToolTipText("Sobrepeso");
+        jCheckBox27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox27ActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jp_flexibilityLayout = new javax.swing.GroupLayout(jp_flexibility);
-        jp_flexibility.setLayout(jp_flexibilityLayout);
-        jp_flexibilityLayout.setHorizontalGroup(
-            jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jp_m_condition1Layout = new javax.swing.GroupLayout(jp_m_condition1);
+        jp_m_condition1.setLayout(jp_m_condition1Layout);
+        jp_m_condition1Layout.setHorizontalGroup(
+            jp_m_condition1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jp_footer2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jp_flexibilityLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addGroup(jp_flexibilityLayout.createSequentialGroup()
-                        .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(rb_coo_18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(60, 60, 60)
-                        .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(rb_coo_12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rb_coo_20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                            .addComponent(rb_coo_21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                            .addComponent(rb_coo_19, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                            .addComponent(rb_coo_6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(94, Short.MAX_VALUE))
+            .addGroup(jp_m_condition1Layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addGroup(jp_m_condition1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel13)
+                    .addGroup(jp_m_condition1Layout.createSequentialGroup()
+                        .addGroup(jp_m_condition1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jCheckBox21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox22, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                            .addComponent(jCheckBox18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(80, 80, 80)
+                        .addGroup(jp_m_condition1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jCheckBox25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jp_flexibilityLayout.setVerticalGroup(
-            jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_flexibilityLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jLabel6)
-                .addGap(12, 12, 12)
-                .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(jp_flexibilityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+        jp_m_condition1Layout.setVerticalGroup(
+            jp_m_condition1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_m_condition1Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel13)
+                .addGap(18, 18, 18)
+                .addGroup(jp_m_condition1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox18)
+                    .addComponent(jCheckBox27))
+                .addGap(18, 18, 18)
+                .addGroup(jp_m_condition1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox19)
+                    .addComponent(jCheckBox26))
+                .addGap(18, 18, 18)
+                .addGroup(jp_m_condition1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox20)
+                    .addComponent(jCheckBox25))
+                .addGap(18, 18, 18)
+                .addGroup(jp_m_condition1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox21)
+                    .addComponent(jCheckBox24))
+                .addGap(18, 18, 18)
+                .addGroup(jp_m_condition1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox23)
+                    .addComponent(jCheckBox22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(jp_footer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        tabbed.addTab("Condición Medica", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_diet.png")), jp_flexibility); // NOI18N
+        tabbed.addTab("Condicion Medica", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_diet.png")), jp_m_condition1); // NOI18N
 
-        jp_strength.setBackground(new java.awt.Color(255, 255, 255));
+        jp_mcondition2.setBackground(new java.awt.Color(255, 255, 255));
 
         jp_footer3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -674,7 +537,7 @@ public class TestWindow extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_footer3Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(btn_previous3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 459, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 471, Short.MAX_VALUE)
                 .addComponent(btn_next3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
@@ -687,110 +550,154 @@ public class TestWindow extends javax.swing.JFrame {
                     .addComponent(btn_previous3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel7.setText("Seleccione a partir de los factores de riesgo que presenta el paciente:");
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        jLabel9.setText("Seleccione a partir de los factores de riesgo que presenta el paciente:");
 
-        rb_coo_23.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_23.setText("Dieta malsana");
-        rb_coo_23.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_23.setFocusPainted(false);
-        rb_coo_23.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_23.setIconTextGap(8);
-
-        rb_coo_24.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_24.setText("Inactividad física");
-        rb_coo_24.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_24.setFocusPainted(false);
-        rb_coo_24.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_24.setIconTextGap(8);
-
-        rb_coo_25.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_25.setText("Consumo de tabaco");
-        rb_coo_25.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_25.setFocusPainted(false);
-        rb_coo_25.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_25.setIconTextGap(8);
-
-        rb_coo_26.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_26.setText("Consumo de alcohol");
-        rb_coo_26.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_26.setFocusPainted(false);
-        rb_coo_26.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_26.setIconTextGap(8);
-
-        rb_coo_27.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_27.setText("Sobrepeso");
-        rb_coo_27.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_27.setFocusPainted(false);
-        rb_coo_27.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_27.setIconTextGap(8);
-
-        rb_coo_28.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_28.setText("Antecedentes familiares");
-        rb_coo_28.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_28.setFocusPainted(false);
-        rb_coo_28.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_28.setIconTextGap(8);
-
-        rb_coo_29.setBackground(new java.awt.Color(102, 255, 0));
-        rb_coo_29.setText("LOD");
-        rb_coo_29.setActionCommand("Mantiene el equilibrio al menos cinco segundos con los ojos cerrados y los brazos estirados por encima de la cabeza");
-        rb_coo_29.setFocusPainted(false);
-        rb_coo_29.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        rb_coo_29.setIconTextGap(8);
-        rb_coo_29.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox8.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox8.setText("Embarazo");
+        jCheckBox8.setToolTipText("Embarazo");
+        jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rb_coo_29ActionPerformed(evt);
+                jCheckBox8ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jp_strengthLayout = new javax.swing.GroupLayout(jp_strength);
-        jp_strength.setLayout(jp_strengthLayout);
-        jp_strengthLayout.setHorizontalGroup(
-            jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jCheckBox9.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox9.setText("Síndrome metabólico");
+        jCheckBox9.setToolTipText("Síndrome metabólico");
+        jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox9ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox10.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox10.setText("Intolerancia a la glucosa");
+        jCheckBox10.setToolTipText("Consumo de tabaco");
+        jCheckBox10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox10ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox11.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox11.setText("Atletas en activo");
+        jCheckBox11.setToolTipText("Consumo de alcohol");
+        jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox11ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox12.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox12.setText("Taquiarritmia");
+        jCheckBox12.setToolTipText("LOD");
+        jCheckBox12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox12ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox13.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox13.setText("Bradicardia");
+        jCheckBox13.setToolTipText("Antecedentes familiares");
+        jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox13ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox14.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox14.setText("EAP");
+        jCheckBox14.setToolTipText("Sobrepeso");
+        jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox14ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox15.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox15.setText("Insuficiencia cardiaca");
+        jCheckBox15.setToolTipText("Consumo de alcohol");
+        jCheckBox15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox15ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox16.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox16.setText("EPOC");
+        jCheckBox16.setToolTipText("Consumo de alcohol");
+        jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox16ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox17.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox17.setText("Insuficiencia renal grave");
+        jCheckBox17.setToolTipText("Consumo de alcohol");
+        jCheckBox17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox17ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jp_mcondition2Layout = new javax.swing.GroupLayout(jp_mcondition2);
+        jp_mcondition2.setLayout(jp_mcondition2Layout);
+        jp_mcondition2Layout.setHorizontalGroup(
+            jp_mcondition2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jp_footer3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jp_strengthLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jp_strengthLayout.createSequentialGroup()
-                            .addComponent(rb_coo_23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGap(65, 65, 65)
-                            .addComponent(rb_coo_29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(157, 157, 157))
-                        .addComponent(jLabel7))
-                    .addGroup(jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(rb_coo_24, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(rb_coo_25, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(rb_coo_26, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(rb_coo_27, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(rb_coo_28, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(jp_mcondition2Layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addGroup(jp_mcondition2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addGroup(jp_mcondition2Layout.createSequentialGroup()
+                        .addGroup(jp_mcondition2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jCheckBox11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(80, 80, 80)
+                        .addGroup(jp_mcondition2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jCheckBox17, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                            .addComponent(jCheckBox15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jp_strengthLayout.setVerticalGroup(
-            jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_strengthLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jLabel7)
-                .addGap(12, 12, 12)
-                .addGroup(jp_strengthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_coo_23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rb_coo_29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addComponent(rb_coo_24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(rb_coo_25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(rb_coo_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(rb_coo_27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(rb_coo_28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+        jp_mcondition2Layout.setVerticalGroup(
+            jp_mcondition2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_mcondition2Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel9)
+                .addGap(18, 18, 18)
+                .addGroup(jp_mcondition2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox8)
+                    .addComponent(jCheckBox14))
+                .addGap(18, 18, 18)
+                .addGroup(jp_mcondition2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox9)
+                    .addComponent(jCheckBox13))
+                .addGap(18, 18, 18)
+                .addGroup(jp_mcondition2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox10)
+                    .addComponent(jCheckBox12))
+                .addGap(18, 18, 18)
+                .addGroup(jp_mcondition2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox11)
+                    .addComponent(jCheckBox15))
+                .addGap(18, 18, 18)
+                .addGroup(jp_mcondition2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox17)
+                    .addComponent(jCheckBox16))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(jp_footer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        tabbed.addTab("Factores de riesgo", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_three-dumbell.png")), jp_strength); // NOI18N
+        tabbed.addTab("Condicion Medica", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_three-dumbell.png")), jp_mcondition2); // NOI18N
 
         jp_resistance.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -830,7 +737,7 @@ public class TestWindow extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_footer4Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(btn_previous4, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 471, Short.MAX_VALUE)
                 .addComponent(btn_finish, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
@@ -843,20 +750,82 @@ public class TestWindow extends javax.swing.JFrame {
                     .addComponent(btn_previous4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jScrollPane4.setBorder(null);
-
-        jTextArea4.setColumns(20);
-        jTextArea4.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jTextArea4.setLineWrap(true);
-        jTextArea4.setRows(6);
-        jTextArea4.setText("Lo primero que se debe hacer es tomarse el pulso. Para ello se cuentan los latidos en una muñeca durante 30 segundos. A continuación, hay que colocarse ante un escalón doble -unos 35 cm de altura- para subirlo y bajarlo con una pierna. Tras tres minutos se cambia la pierna. \nTras finalizar el ejercicio se mide de nuevo el pulso. De este segundo resultado se resta el valor del pulso en reposo.\n");
-        jTextArea4.setWrapStyleWord(true);
-        jTextArea4.setAlignmentX(0.0F);
-        jTextArea4.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextArea4.setFocusable(false);
-        jScrollPane4.setViewportView(jTextArea4);
-
         jl_msg.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        jLabel8.setText("Seleccione a partir de los factores de riesgo que presenta el paciente:");
+
+        jCheckBox1.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox1.setText("Dieta malsana");
+        jCheckBox1.setToolTipText("Dieta malsana");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox2.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox2.setText("Inactividad física");
+        jCheckBox2.setToolTipText("Inactividad física");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox3.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox3.setText("Consumo de tabaco");
+        jCheckBox3.setToolTipText("Consumo de tabaco");
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox4.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox4.setText("Antecedentes familiares");
+        jCheckBox4.setToolTipText("Antecedentes familiares");
+        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox4ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox5.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox5.setText("Sobrepeso");
+        jCheckBox5.setToolTipText("Sobrepeso");
+        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox5ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox6.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox6.setText("Consumo de alcohol");
+        jCheckBox6.setToolTipText("Consumo de alcohol");
+        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox6ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox_LOD.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox_LOD.setText("LOD");
+        jCheckBox_LOD.setToolTipText("LOD");
+        jCheckBox_LOD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_LODActionPerformed(evt);
+            }
+        });
+
+        jCheckBox_DM.setBackground(new java.awt.Color(102, 255, 0));
+        jCheckBox_DM.setText("Diabetis mellitus");
+        jCheckBox_DM.setToolTipText("Consumo de alcohol");
+        jCheckBox_DM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_DMActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jp_resistanceLayout = new javax.swing.GroupLayout(jp_resistance);
         jp_resistance.setLayout(jp_resistanceLayout);
@@ -865,26 +834,54 @@ public class TestWindow extends javax.swing.JFrame {
             .addComponent(jp_footer4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jp_resistanceLayout.createSequentialGroup()
                 .addGap(32, 32, 32)
+                .addComponent(jl_msg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jp_resistanceLayout.createSequentialGroup()
+                .addGap(90, 90, 90)
                 .addGroup(jp_resistanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
                     .addGroup(jp_resistanceLayout.createSequentialGroup()
-                        .addComponent(jl_msg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(jp_resistanceLayout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(jp_resistanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jCheckBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox6, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                            .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(80, 80, 80)
+                        .addGroup(jp_resistanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jCheckBox5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox_LOD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBox_DM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jp_resistanceLayout.setVerticalGroup(
             jp_resistanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_resistanceLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
+                .addGap(48, 48, 48)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
+                .addGroup(jp_resistanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox1)
+                    .addComponent(jCheckBox5))
+                .addGap(18, 18, 18)
+                .addGroup(jp_resistanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox2)
+                    .addComponent(jCheckBox4))
+                .addGap(18, 18, 18)
+                .addGroup(jp_resistanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox3)
+                    .addComponent(jCheckBox_LOD))
+                .addGap(18, 18, 18)
+                .addGroup(jp_resistanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox6)
+                    .addComponent(jCheckBox_DM))
+                .addGap(44, 44, 44)
                 .addComponent(jl_msg)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 169, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addComponent(jp_footer4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        tabbed.addTab("Formulario 5", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_run.png")), jp_resistance); // NOI18N
+        tabbed.addTab("Factores de riesgo", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_run.png")), jp_resistance); // NOI18N
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
         bg.setLayout(bgLayout);
@@ -894,7 +891,7 @@ public class TestWindow extends javax.swing.JFrame {
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabbed, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
+            .addComponent(tabbed, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         tabbed.getAccessibleContext().setAccessibleName("Tab");
@@ -913,76 +910,65 @@ public class TestWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_next1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_next1ActionPerformed
-        transactionsNext();
-    }//GEN-LAST:event_btn_next1ActionPerformed
-
-    private void btn_previous1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_previous1ActionPerformed
-        transactionsPrevious();
-    }//GEN-LAST:event_btn_previous1ActionPerformed
-
-    private void btn_next2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_next2ActionPerformed
-        transactionsNext();
-    }//GEN-LAST:event_btn_next2ActionPerformed
-
-    private void btn_previous2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_previous2ActionPerformed
-        transactionsPrevious();
-    }//GEN-LAST:event_btn_previous2ActionPerformed
-
-    private void btn_next3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_next3ActionPerformed
-        transactionsNext();
-    }//GEN-LAST:event_btn_next3ActionPerformed
-
-    private void btn_previous3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_previous3ActionPerformed
-        transactionsPrevious();
-    }//GEN-LAST:event_btn_previous3ActionPerformed
-
-    private void btn_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_finishActionPerformed
-        //actionFinish();
-    }//GEN-LAST:event_btn_finishActionPerformed
-
-    private void btn_previous4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_previous4ActionPerformed
-        transactionsPrevious();
-    }//GEN-LAST:event_btn_previous4ActionPerformed
-
-    private void btn_nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nextActionPerformed
-        transactionsNext();
-    }//GEN-LAST:event_btn_nextActionPerformed
-
-    private void btn_mainmenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mainmenuActionPerformed
-        MainWindow mw = new MainWindow();
-        mw.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btn_mainmenuActionPerformed
-
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         MainWindow mw = new MainWindow();
         mw.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_formWindowClosing
+    // TODO add your handling code here:
+    // TODO add your handling code here:
 
-    private void tf_ageKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_ageKeyReleased
-        if (is_biometric_valid()){
-            enabled_tabs(true);
-            // mostar mensaje con la cantidad de repeticiones a hacer
-//            double weigth = Double.parseDouble(tf_weigth.getText());
-//            jl_msg.setText("Dado su peso corporal ("+ weigth +"kg), usted debe realizar el ejercicio indicado con "+ repeats(weigth) +" repeticiones.");
-        }else{
-            enabled_tabs(false);
-        }
-    }//GEN-LAST:event_tf_ageKeyReleased
-
-    private void tf_ta_sistolicaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_ta_sistolicaKeyReleased
-        if (is_biometric_valid()){
-            enabled_tabs(true);
-        }else{
-            enabled_tabs(false);
-        }
-    }//GEN-LAST:event_tf_ta_sistolicaKeyReleased
-
-    private void rb_coo_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_coo_1ActionPerformed
+    private void jcb_coo_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_coo_1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rb_coo_1ActionPerformed
+    }//GEN-LAST:event_jcb_coo_1ActionPerformed
+
+    private void jcb_coo_29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_coo_29ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcb_coo_29ActionPerformed
+
+    private void jCheckBox_LODActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_LODActionPerformed
+        checkBoxList_rfactors.add(jCheckBox_LOD);
+    }//GEN-LAST:event_jCheckBox_LODActionPerformed
+
+    private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
+        checkBoxList_rfactors.add(jCheckBox6);
+    }//GEN-LAST:event_jCheckBox6ActionPerformed
+
+    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+        checkBoxList_rfactors.add(jCheckBox5);
+    }//GEN-LAST:event_jCheckBox5ActionPerformed
+
+    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+        checkBoxList_rfactors.add(jCheckBox4);
+    }//GEN-LAST:event_jCheckBox4ActionPerformed
+
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+        checkBoxList_rfactors.add(jCheckBox3);
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        checkBoxList_rfactors.add(jCheckBox2);
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        checkBoxList_rfactors.add(jCheckBox1);
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void btn_previous4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_previous4ActionPerformed
+        transactionsPrevious();
+    }//GEN-LAST:event_btn_previous4ActionPerformed
+
+    private void btn_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_finishActionPerformed
+        actionFinish();
+    }//GEN-LAST:event_btn_finishActionPerformed
+
+    private void btn_previous2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_previous2ActionPerformed
+        transactionsPrevious();
+    }//GEN-LAST:event_btn_previous2ActionPerformed
+
+    private void btn_next2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_next2ActionPerformed
+        transactionsNext();
+    }//GEN-LAST:event_btn_next2ActionPerformed
 
     private void tf_ta_diastolicaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_ta_diastolicaKeyReleased
         if (is_biometric_valid()){
@@ -992,9 +978,134 @@ public class TestWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_tf_ta_diastolicaKeyReleased
 
-    private void rb_coo_29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_coo_29ActionPerformed
+    private void tf_ta_sistolicaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_ta_sistolicaKeyReleased
+        if (is_biometric_valid()){
+            enabled_tabs(true);
+        }else{
+            enabled_tabs(false);
+        }
+    }//GEN-LAST:event_tf_ta_sistolicaKeyReleased
+
+    private void tf_ageKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_ageKeyReleased
+        if (is_biometric_valid()){
+            enabled_tabs(true);
+            // mostar mensaje con la cantidad de repeticiones a hacer
+            //            double weigth = Double.parseDouble(tf_weigth.getText());
+            //            jl_msg.setText("Dado su peso corporal ("+ weigth +"kg), usted debe realizar el ejercicio indicado con "+ repeats(weigth) +" repeticiones.");
+        }else{
+            enabled_tabs(false);
+        }
+    }//GEN-LAST:event_tf_ageKeyReleased
+
+    private void btn_mainmenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mainmenuActionPerformed
+        MainWindow mw = new MainWindow();
+        mw.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btn_mainmenuActionPerformed
+
+    private void btn_nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nextActionPerformed
+        transactionsNext();
+    }//GEN-LAST:event_btn_nextActionPerformed
+
+    private void btn_previous3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_previous3ActionPerformed
+        transactionsPrevious();
+    }//GEN-LAST:event_btn_previous3ActionPerformed
+
+    private void btn_next3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_next3ActionPerformed
+        transactionsNext();
+    }//GEN-LAST:event_btn_next3ActionPerformed
+
+    private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox8);
+    }//GEN-LAST:event_jCheckBox8ActionPerformed
+
+    private void jCheckBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox9ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox9);
+    }//GEN-LAST:event_jCheckBox9ActionPerformed
+
+    private void jCheckBox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox10ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox10);
+    }//GEN-LAST:event_jCheckBox10ActionPerformed
+
+    private void jCheckBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox11ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox11);
+    }//GEN-LAST:event_jCheckBox11ActionPerformed
+
+    private void jCheckBox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox12ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox12);
+    }//GEN-LAST:event_jCheckBox12ActionPerformed
+
+    private void jCheckBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox13ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox13);
+    }//GEN-LAST:event_jCheckBox13ActionPerformed
+
+    private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox14);
+    }//GEN-LAST:event_jCheckBox14ActionPerformed
+
+    private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox15);
+    }//GEN-LAST:event_jCheckBox15ActionPerformed
+
+    private void jCheckBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox16ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox16);
+    }//GEN-LAST:event_jCheckBox16ActionPerformed
+
+    private void jCheckBox17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox17ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox17);
+    }//GEN-LAST:event_jCheckBox17ActionPerformed
+
+    private void jCheckBox18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox18ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox18);
+    }//GEN-LAST:event_jCheckBox18ActionPerformed
+
+    private void jCheckBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox19ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox19);
+    }//GEN-LAST:event_jCheckBox19ActionPerformed
+
+    private void jCheckBox20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox20ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox20);
+    }//GEN-LAST:event_jCheckBox20ActionPerformed
+
+    private void jCheckBox21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox21ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox21);
+    }//GEN-LAST:event_jCheckBox21ActionPerformed
+
+    private void jCheckBox22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox22ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox22);
+    }//GEN-LAST:event_jCheckBox22ActionPerformed
+
+    private void jCheckBox23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox23ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox23);
+    }//GEN-LAST:event_jCheckBox23ActionPerformed
+
+    private void jCheckBox24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox24ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox24);
+    }//GEN-LAST:event_jCheckBox24ActionPerformed
+
+    private void jCheckBox25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox25ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox25);
+    }//GEN-LAST:event_jCheckBox25ActionPerformed
+
+    private void jCheckBox26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox26ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox26);
+    }//GEN-LAST:event_jCheckBox26ActionPerformed
+
+    private void jCheckBox27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox27ActionPerformed
+        checkBoxList_rmconditons.add(jCheckBox27);
+    }//GEN-LAST:event_jCheckBox27ActionPerformed
+
+    private void rb_manKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rb_manKeyReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_rb_coo_29ActionPerformed
+    }//GEN-LAST:event_rb_manKeyReleased
+
+    private void rb_manActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_manActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rb_manActionPerformed
+
+    private void jCheckBox_DMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_DMActionPerformed
+        checkBoxList_rfactors.add(jCheckBox_DM);
+    }//GEN-LAST:event_jCheckBox_DMActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1043,43 +1154,79 @@ public class TestWindow extends javax.swing.JFrame {
         }
     }
     
-//    private void actionFinish() {
-////        double weigth = Double.parseDouble(tf_weigth.getText());
-////        double height = Double.parseDouble(tf_height.getText())/100;
-//        if (is_biometric_valid() && is_strenght_valid() && is_resistance_valid()) {
-//            // obtener datos insertados 
-//            int age = Integer.parseInt(tf_age.getText());
-//            String option_coordination = optionSelected(bgroup_coordination);
-//            String option_flexibility = optionSelected(bgroup_flexibility);
-//            int strenght_repeats = Integer.parseInt(tf_repeat.getText());
-//            int heart_rate = heart_rate_difference();
-//            // consultar el SBC
-////            String[] msg = connect_with_SBC(age, weigth, height, option_coordination, option_flexibility, strenght_repeats, heart_rate);
-//            // mostar dialogo con resultado
-//            ResultDialog rw = new ResultDialog(null, true);
-////            rw.setPoints(msg[0]);
-////            rw.setMessage(msg[1]);
-//            rw.setVisible(true);
-//            // accion a realizar
-//            if (rw.getAction().equals("menu")){
-//                MainWindow mw = new MainWindow();
-//                mw.setVisible(true);
-//                this.dispose();
-//            }else{           
-//                clean_fields();
-//                tf_age.requestFocus();
-//                enabled_tabs(false);
-//                tabbed.setSelectedIndex(0);
-//            }
-//        }else{
-//            JOptionPane.showMessageDialog(this, "No ha completado todas las pruebas, compruebe los campos.", "Error", JOptionPane.ERROR_MESSAGE);
-//        }
-//    }
+    private void actionFinish() {
+//        double weigth = Double.parseDouble(tf_weigth.getText());
+//        double height = Double.parseDouble(tf_height.getText())/100;
+        if (is_biometric_valid()) {
+            // obtener datos insertados 
+            int age = Integer.parseInt(tf_age.getText());
+            int diastolica = Integer.parseInt(tf_ta_diastolica.getText());
+            int sistolica = Integer.parseInt(tf_ta_sistolica.getText());
+            List<String> rmconditons = new ArrayList<>();
+            for(JCheckBox checkbox: checkBoxList_rmconditons){
+                rmconditons.add(checkbox.getText());
+                //System.out.println(checkbox.getText());
+            }
+            List<String> rfactors = new ArrayList<>();
+            for(JCheckBox checkbox: checkBoxList_rfactors){
+                rfactors.add(checkbox.getText());
+            }
+            String option_sex = rb_man.getActionCommand();
+            if(rb_woman.isSelected()){
+                option_sex = rb_woman.getActionCommand();
+                if(age>15 && age <50){
+                    rfactors.add("Mujer en edad fertil");
+                }
+            }
+            
+            
+            
+            
+            
+            // consultar el SBC
+            String msg = connect_with_SBC(diastolica,sistolica,rmconditons.toString(),rfactors.toString());
+            // mostar dialogo con resultado
+            ResultDialog rw = new ResultDialog(null, true);
+//            rw.setPoints(msg[0]);
+//            rw.setMessage(msg[1]);
+            rw.setVisible(true);
+            // accion a realizar
+            if (rw.getAction().equals("menu")){
+                MainWindow mw = new MainWindow();
+                mw.setVisible(true);
+                this.dispose();
+            }else{           
+                clean_fields();
+                tf_age.requestFocus();
+                enabled_tabs(false);
+                tabbed.setSelectedIndex(0);
+            }
+        }else{
+            JOptionPane.showMessageDialog(this, "No ha completado todas las pruebas, compruebe los campos.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
     
     private String optionSelected(ButtonGroup button_group){
         ButtonModel selectedButtonModel = button_group.getSelection();
         return selectedButtonModel.getActionCommand();
     }
+    
+//    private String multiple_optionSelected(List<JCheckBox> checkBoxList){
+//        for (JCheckBox checkBox : checkBoxList) {
+//            checkBox.addActionListener(new ActionListener() {
+//                @Override
+//                public void actionPerformed(ActionEvent e) {
+//                    if (checkBox.isSelected()) {
+//                        selectedOptions.add(checkBox);
+//                    } else {
+//                        selectedOptions.remove(checkBox);
+//                    }
+//                }
+//            });
+//        }
+//        
+//        return selectedButtonModel.getActionCommand();
+//    }
     
     private boolean isInteger(String input){
         String regex = "^[1-9]\\d*$";
@@ -1097,9 +1244,8 @@ public class TestWindow extends javax.swing.JFrame {
         String age = tf_age.getText();
         String ta_diastolica = tf_ta_diastolica.getText();
         String ta_sistolica = tf_ta_sistolica.getText();
-        
         if (isInteger(age) && isInteger(ta_diastolica) && isInteger(ta_sistolica)){
-            if (Integer.parseInt(age) > 0 && Integer.parseInt(ta_diastolica) > 0 && Integer.parseInt(ta_sistolica) > 0){
+            if (Integer.parseInt(age) > 17 && Integer.parseInt(ta_diastolica) > 0 && Integer.parseInt(ta_sistolica) > 0){
                 return true;
             }           
         }
@@ -1134,9 +1280,9 @@ public class TestWindow extends javax.swing.JFrame {
         tabbed.setEnabledAt(1, enabled);
         tabbed.setEnabledAt(2, enabled);
         tabbed.setEnabledAt(3, enabled);
-        tabbed.setEnabledAt(4, enabled);
         status_button(btn_next, enabled);
     }
+     
     
     private void status_button(Button btn, boolean enabled){
         btn.setEnabled(enabled);
@@ -1157,86 +1303,87 @@ public class TestWindow extends javax.swing.JFrame {
         tf_age.setText("");
         tf_ta_diastolica.setText("");
         tf_ta_sistolica.setText("");
-        rb_coo_1.setSelected(true);
-//        rb_fle_1.setSelected(true);
+        //jcb_coo_1.setSelected(true);
+//        jcb_fle_1.setSelected(true);
 //        tf_repeat.setText("");
 //        tf_pulse1.setText("");
 //        tf_pulse2.setText("");       
     }
     
-    private String[] connect_with_SBC(int age, double weigth, double height, String coordination, String flexibility, int strong, int resistence){
+    private String connect_with_SBC(int ta_diastolica, int ta_sitolica, String m_conditions, String r_factors){
         String[] files = new String[1];
-        files[0] = "src/arterial_tension/SBC.pl";
+        files[0] = "src/sbc_for_hipertension_tratament_japp/SBC.pl";
         Connection c = new Connection(files);
 
-        String[] res = c.condition(age, weigth, height, coordination, flexibility, strong, resistence);
+//        String cat = c.categoria(ta_diastolica, ta_sitolica);
+//        String rcv = c.rcv(r_factors, cat);
+//        String estrategia = c.propuesta_estrategia_terapeutica(r_factors, cat);
+//        String cont_abs = c.contraind_a(m_conditions);
+        String cont_relat = c.contraind_r(m_conditions);
+        String res = "hola";
         return res;
     }
-
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
-    private javax.swing.ButtonGroup bgroup_coordination;
-    private javax.swing.ButtonGroup bgroup_flexibility;
+    private javax.swing.ButtonGroup bgroup_sex;
     private arterial_tension.customs.Button btn_finish;
     private arterial_tension.customs.Button btn_mainmenu;
     private arterial_tension.customs.Button btn_next;
-    private arterial_tension.customs.Button btn_next1;
     private arterial_tension.customs.Button btn_next2;
     private arterial_tension.customs.Button btn_next3;
-    private arterial_tension.customs.Button btn_previous1;
     private arterial_tension.customs.Button btn_previous2;
     private arterial_tension.customs.Button btn_previous3;
     private arterial_tension.customs.Button btn_previous4;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox10;
+    private javax.swing.JCheckBox jCheckBox11;
+    private javax.swing.JCheckBox jCheckBox12;
+    private javax.swing.JCheckBox jCheckBox13;
+    private javax.swing.JCheckBox jCheckBox14;
+    private javax.swing.JCheckBox jCheckBox15;
+    private javax.swing.JCheckBox jCheckBox16;
+    private javax.swing.JCheckBox jCheckBox17;
+    private javax.swing.JCheckBox jCheckBox18;
+    private javax.swing.JCheckBox jCheckBox19;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox20;
+    private javax.swing.JCheckBox jCheckBox21;
+    private javax.swing.JCheckBox jCheckBox22;
+    private javax.swing.JCheckBox jCheckBox23;
+    private javax.swing.JCheckBox jCheckBox24;
+    private javax.swing.JCheckBox jCheckBox25;
+    private javax.swing.JCheckBox jCheckBox26;
+    private javax.swing.JCheckBox jCheckBox27;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox jCheckBox8;
+    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JCheckBox jCheckBox_DM;
+    private javax.swing.JCheckBox jCheckBox_LOD;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jl_msg;
     private javax.swing.JPanel jp_biometric;
-    private javax.swing.JPanel jp_coordination;
-    private javax.swing.JPanel jp_flexibility;
-    private javax.swing.JPanel jp_footer1;
     private javax.swing.JPanel jp_footer2;
     private javax.swing.JPanel jp_footer3;
     private javax.swing.JPanel jp_footer4;
     private javax.swing.JPanel jp_footer5;
+    private javax.swing.JPanel jp_m_condition1;
+    private javax.swing.JPanel jp_mcondition2;
     private javax.swing.JPanel jp_resistance;
-    private javax.swing.JPanel jp_strength;
-    private arterial_tension.customs.RadioButton rb_coo_1;
-    private arterial_tension.customs.RadioButton rb_coo_10;
-    private arterial_tension.customs.RadioButton rb_coo_11;
-    private arterial_tension.customs.RadioButton rb_coo_12;
-    private arterial_tension.customs.RadioButton rb_coo_13;
-    private arterial_tension.customs.RadioButton rb_coo_14;
-    private arterial_tension.customs.RadioButton rb_coo_15;
-    private arterial_tension.customs.RadioButton rb_coo_16;
-    private arterial_tension.customs.RadioButton rb_coo_17;
-    private arterial_tension.customs.RadioButton rb_coo_18;
-    private arterial_tension.customs.RadioButton rb_coo_19;
-    private arterial_tension.customs.RadioButton rb_coo_2;
-    private arterial_tension.customs.RadioButton rb_coo_20;
-    private arterial_tension.customs.RadioButton rb_coo_21;
-    private arterial_tension.customs.RadioButton rb_coo_22;
-    private arterial_tension.customs.RadioButton rb_coo_23;
-    private arterial_tension.customs.RadioButton rb_coo_24;
-    private arterial_tension.customs.RadioButton rb_coo_25;
-    private arterial_tension.customs.RadioButton rb_coo_26;
-    private arterial_tension.customs.RadioButton rb_coo_27;
-    private arterial_tension.customs.RadioButton rb_coo_28;
-    private arterial_tension.customs.RadioButton rb_coo_29;
-    private arterial_tension.customs.RadioButton rb_coo_3;
-    private arterial_tension.customs.RadioButton rb_coo_4;
-    private arterial_tension.customs.RadioButton rb_coo_5;
-    private arterial_tension.customs.RadioButton rb_coo_6;
-    private arterial_tension.customs.RadioButton rb_coo_7;
-    private arterial_tension.customs.RadioButton rb_coo_8;
-    private arterial_tension.customs.RadioButton rb_coo_9;
+    private arterial_tension.customs.RadioButton rb_man;
+    private arterial_tension.customs.RadioButton rb_woman;
     private arterial_tension.customs.MaterialTabbed tabbed;
     private arterial_tension.customs.TextField tf_age;
     private arterial_tension.customs.TextField tf_ta_diastolica;

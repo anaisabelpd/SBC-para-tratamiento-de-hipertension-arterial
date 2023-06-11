@@ -97,19 +97,19 @@ public class MaterialTabbed extends JTabbedPane {
             g2.setColor(new Color(200, 200, 200));
             Insets insets = getTabAreaInsets(tabPlacement);
             int width = tabPane.getWidth();
-            int heigth = tabPane.getHeight();
+            int height = tabPane.getHeight();
             if (tabPlacement == TOP) {
-                int tabheigth = calculateTabAreaHeight(tabPlacement, runCount, maxTabHeight);
-                g2.drawLine(insets.left, tabheigth, width - insets.right - 1, tabheigth);
+                int tabHeight = calculateTabAreaHeight(tabPlacement, runCount, maxTabHeight);
+                g2.drawLine(insets.left, tabHeight, width - insets.right - 1, tabHeight);
             } else if (tabPlacement == BOTTOM) {
-                int tabheigth = heigth - calculateTabAreaHeight(tabPlacement, runCount, maxTabHeight);
-                g2.drawLine(insets.left, tabheigth, width - insets.right - 1, tabheigth);
+                int tabHeight = height - calculateTabAreaHeight(tabPlacement, runCount, maxTabHeight);
+                g2.drawLine(insets.left, tabHeight, width - insets.right - 1, tabHeight);
             } else if (tabPlacement == LEFT) {
                 int tabWidth = calculateTabAreaWidth(tabPlacement, runCount, maxTabWidth);
-                g2.drawLine(tabWidth, insets.top, tabWidth, heigth - insets.bottom - 1);
+                g2.drawLine(tabWidth, insets.top, tabWidth, height - insets.bottom - 1);
             } else if (tabPlacement == RIGHT) {
                 int tabWidth = width - calculateTabAreaWidth(tabPlacement, runCount, maxTabWidth) - 1;
-                g2.drawLine(tabWidth, insets.top, tabWidth, heigth - insets.bottom - 1);
+                g2.drawLine(tabWidth, insets.top, tabWidth, height - insets.bottom - 1);
             }
             g2.dispose();
         }
