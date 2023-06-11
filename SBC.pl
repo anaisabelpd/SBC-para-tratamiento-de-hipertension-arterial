@@ -59,21 +59,24 @@ estrategia(6,"Cambios en el estilo de vida. Tratamiento inmediato para la PA con
 propuesta_estrategia_terapeutica(Lista_FRC,Categoria,Estrategia):-
   length(Lista_FRC,Y),
   (
-   Y=0,memb('LOD',Lista_FRC)=false, memb('DM',Lista_FRC)=false,
-   (Categoria="Prehipertensión",estrategia(1,Estrategia),!;
-    Categoria="Grado I",estrategia(4,Estrategia),!;
-    Categoria="Grado II",estrategia(5,Estrategia),!;
-    Categoria="Grado III",estrategia(6,Estrategia),!)
-   ;
-   Y<3,memb('LOD',Lista_FRC)=false, memb('DM',Lista_FRC)=false,
-   (Categoria="Prehipertensión",estrategia(2,Estrategia),!;
-    (Categoria="Grado I";Categoria="Grado II"),estrategia(5,Estrategia),!;
-    Categoria="Grado III",estrategia(6,Estrategia),!)
-   ;
-   (Y>=3;memb('LOD',Lista_FRC)=true; memb('DM',Lista_FRC)=true),
-   (Categoria="Prehipertensión",estrategia(3,Estrategia);
-    (Categoria="Grado I";Categoria="Grado II";Categoria="Grado III"),estrategia(6,Estrategia)
-   )
+    Y=0,
+    (
+        Categoria="Prehipertensión",estrategia(1,Estrategia),!;
+        Categoria="Grado I",estrategia(4,Estrategia),!;
+        Categoria="Grado II",estrategia(5,Estrategia),!;
+        Categoria="Grado III",estrategia(6,Estrategia),!
+    )
+    ;
+    Y<3,not(member('LOD',Lista_FRC)),not(member('DM',Lista_FRC)),
+    (
+        Categoria="Prehipertensión",estrategia(2,Estrategia),!;
+        (Categoria="Grado I";Categoria="Grado II"),estrategia(5,Estrategia),!;
+        Categoria="Grado III",estrategia(6,Estrategia),!
+    )
+    ;
+    (   Categoria="Prehipertensión",estrategia(3,Estrategia);
+        (Categoria="Grado I";Categoria="Grado II";Categoria="Grado III"),estrategia(6,Estrategia)
+    )
   ).
 
 %Contraindicaciones absolutas por farmacos
