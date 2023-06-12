@@ -91,29 +91,6 @@ contraind_abso_por_f(['Embarazo', 'Angioedema', 'Hiperpotasemia', 'Estenosis art
 contraind_abso_por_f(['Embarazo', 'Hiperpotasemia', 'Estenosis arterial renal bilateral'],'ARA II').
 contraind_abso_por_f(['Insuficiencia renal aguda', 'Insuficiencia renal grave', 'Hiperpotasemia'],'Antagonistas del receptor mineralcorticoideo').
 
-
-%Contraindicaciones absolutas
-%contraindicacion_a(ListaDeSintomas,Farmaco) retorna verdadero(esta contraindicado)
-%en caso de que alguno de los sintomas este contraindicado para el tipo de farmaco
-% Ejemplo:
-%?- contraind_a(['Gota','Asma','Bloqueo AV grado 2','Bloqueo AV grado 3'],F).
-%F = 'Diuréticos tiazídicos' ;
-%F = 'Betabloqueadores' ;
-%F = 'Antagonistas del calcio-verapamilo' ;
-%F = 'Antagonistas del calcio-dialtiazem' ;
-%false.
-
-contraind_a(ListaDeSintomas,F):- contraind_abso_por_f(LCpF,F),not(disjuntos(LCpF,ListaDeSintomas)).
-
-%Disjuncion entre conjuntos A y B
-disjuntos([],_).
-disjuntos([X|Ra],B):- memb(X,B),
-                      !,fail;
-                      disjuntos(Ra,B).
-memb(_, []) :- fail.
-memb(X,[X|_R]).
-memb(X,[_H|C]):- memb(X,C).
-
 % Devolver las contraindicaciones en una lista
 contraindicaciones_absolutas(ListaFRC,L_farm):- findall(F,(contraind_abso_por_f(LF,F),member(X,LF),member(X,ListaFRC)),L_farm).
  
