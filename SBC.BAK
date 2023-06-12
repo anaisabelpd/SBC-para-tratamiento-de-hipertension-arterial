@@ -127,7 +127,7 @@ contraind_rela_por_f(['Mujeres en edad fértil'],'IECA').
 contraind_rela_por_f(['Mujeres en edad fértil'],'ARA II').
 
 %Contraindicaciones relativas
-contraind_r(ListaDeSintomas,F):- contraind_rela_por_f(LCpF,F),not(disjuntos(LCpF,ListaDeSintomas)).
+contraindicaciones_relativas(ListaFRC,L_farm):- findall(F,(contraind_rela_por_f(LF,F),member(X,LF),member(X,ListaFRC)),L_farm).
 
  
  
