@@ -12,11 +12,11 @@ categoria(PAS,PAD,"Grado II"):-
   PAD>=100,!.
 categoria(PAS,PAD,"Grado I"):-
   PAS>=140,!;
-  AD>=90,!.
+  PAD>=90,!.
 categoria(PAS,PAD,"Prehipertensión"):-
   PAS>=120,!;
   PAD>=80,!.
-categoria(PAS,PAD,"Normal").
+categoria(_,_,"Normal").
 
 % FAC factores de riesgo cardiovasculares
 % LOD lesion en organo diana
@@ -115,11 +115,7 @@ memb(X,[X|_R]).
 memb(X,[_H|C]):- memb(X,C).
 
 % Devolver las contraindicaciones en una lista
-contraindicaciones([],[]).
-contraindicaciones([X|ListaFRC],[F|Fac]):-
- member(X,L),
- contraind_por_f(L,F),
- contraindicaciones(ListaFRC,Fac),!.
+contraindicaciones_absolutas(ListaFRC,L_farm):- findall(F,(contraind_abso_por_f(LF,F),member(X,LF),member(X,ListaFRC)),L_farm).
  
 % Contraindicaciones relativas por farmacos
 %contraind_rela_por_f(L:Lista de enfermedades a las que esta contraindicado,F: Farmaco).
@@ -132,7 +128,6 @@ contraind_rela_por_f(['Mujeres en edad fértil'],'ARA II').
 
 %Contraindicaciones relativas
 contraind_r(ListaDeSintomas,F):- contraind_rela_por_f(LCpF,F),not(disjuntos(LCpF,ListaDeSintomas)).
-
 
  
  
