@@ -59,7 +59,7 @@ public class Connection {
             res += "No se encontraron\n";
         } else {
             //ciclo para concatenar todas las soluciones de la consulta
-            //while (query.hasMoreSolutions()) {
+            while (query.hasMoreSolutions()) {
                 solution = query.nextSolution();                
                 String res_t = solution.get("Msj").toString();
                 
@@ -68,7 +68,7 @@ public class Connection {
                 String mensaje = new String(bytes, StandardCharsets.UTF_8);
                 
                 res += mensaje+", ";
-            //}
+            }
             res = res.substring(0, res.length()-2);
         }
         return res;
@@ -76,6 +76,7 @@ public class Connection {
     public String propuesta_estrategia_terapeutica(String r_factor, String categoria) {
         String res = "";
         consult = "propuesta_estrategia_terapeutica("+r_factor+","+categoria+", Msj).";
+        System.out.println(categoria);
         query = new Query(consult);
         
         if (!query.hasSolution()) {
@@ -98,11 +99,11 @@ public class Connection {
     }
     public String contraind_a(String m_conditons) {
         String res = new String();
-        consult = "contraind_a("+m_conditons+", Msj).";
+        consult = "contraindicaciones_absolutas("+m_conditons+", Msj).";
         query = new Query(consult);
         
         if (!query.hasSolution()) {
-            res += "No se encontraron\n";
+            res = "No se encontraron.";
         } else {
             //ciclo para concatenar todas las soluciones de la consulta
             while (query.hasMoreSolutions()) {
@@ -113,7 +114,7 @@ public class Connection {
                 byte[] bytes = res_temp.getBytes(StandardCharsets.ISO_8859_1);
                 String mensaje = new String(bytes, StandardCharsets.UTF_8);
                 
-                res += mensaje+", ";
+                res = mensaje+", ";
             }
             res = res.substring(0, res.length()-2);
         }
@@ -121,7 +122,7 @@ public class Connection {
     }
     public String contraind_r(String m_conditons) {
         String res = "";
-        consult = "contraind_r("+m_conditons+", Msj).";
+        consult = "contraindicaciones_relativas("+m_conditons+", Msj).";
         query = new Query(consult);
         
         if (!query.hasSolution()) {
@@ -134,7 +135,7 @@ public class Connection {
                 // Decodificar la cadena 
                 byte[] bytes = msj_t.getBytes(StandardCharsets.ISO_8859_1);
                 String mensaje = new String(bytes, StandardCharsets.UTF_8);
-                res += mensaje+", ";
+                res = mensaje+", ";
             }
             res = res.substring(0, res.length()-2);
         }

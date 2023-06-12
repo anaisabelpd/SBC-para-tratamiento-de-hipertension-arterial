@@ -1320,10 +1320,10 @@ public class TestWindow extends javax.swing.JFrame {
         String[] files = new String[1];
         files[0] = "src/sbc_for_hipertension_tratament_japp/SBC.pl";
         Connection c = new Connection(files);
-
-        String cat = "Categoria: "+c.categoria(ta_diastolica, ta_sitolica);
-        String rcv = "Riego cardriovascular: "+c.rcv(r_factors, cat);
-        String estrategia = "Estrategia: "+c.propuesta_estrategia_terapeutica(r_factors, cat);
+        String cat_aux = c.categoria(ta_diastolica, ta_sitolica);
+        String cat = "Categoria: "+cat_aux;
+        String rcv = "Riego cardriovascular: "+c.rcv(r_factors, cat_aux);
+        String estrategia = "Estrategia: "+c.propuesta_estrategia_terapeutica(r_factors, cat_aux);
         String cont_abs = "Contraindiaciones absolutas: "+c.contraind_a(m_conditions);
         String cont_relat = "Contraindicaiones relativa: "+c.contraind_r(m_conditions);
         
