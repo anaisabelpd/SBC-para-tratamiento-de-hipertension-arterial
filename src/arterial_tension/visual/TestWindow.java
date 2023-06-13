@@ -562,9 +562,19 @@ public class TestWindow extends javax.swing.JFrame {
         jCheckBox8.setBackground(new java.awt.Color(102, 255, 0));
         jCheckBox8.setText("Embarazo");
         jCheckBox8.setToolTipText("Embarazo");
+        jCheckBox8.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jCheckBox8StateChanged(evt);
+            }
+        });
         jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox8ActionPerformed(evt);
+            }
+        });
+        jCheckBox8.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jCheckBox8PropertyChange(evt);
             }
         });
 
@@ -979,6 +989,7 @@ public class TestWindow extends javax.swing.JFrame {
     private void tf_ta_diastolicaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_ta_diastolicaKeyReleased
         if (is_biometric_valid()){
             enabled_tabs(true);
+            
         }else{
             enabled_tabs(false);
         }
@@ -995,9 +1006,6 @@ public class TestWindow extends javax.swing.JFrame {
     private void tf_ageKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_ageKeyReleased
         if (is_biometric_valid()){
             enabled_tabs(true);
-            // mostar mensaje con la cantidad de repeticiones a hacer
-            //            double weigth = Double.parseDouble(tf_weigth.getText());
-            //            jl_msg.setText("Dado su peso corporal ("+ weigth +"kg), usted debe realizar el ejercicio indicado con "+ repeats(weigth) +" repeticiones.");
         }else{
             enabled_tabs(false);
         }
@@ -1102,16 +1110,27 @@ public class TestWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox27ActionPerformed
 
     private void rb_manKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rb_manKeyReleased
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_rb_manKeyReleased
 
     private void rb_manActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_manActionPerformed
-        // TODO add your handling code here:
+        //jCheckBox8.setEnabled(false);
     }//GEN-LAST:event_rb_manActionPerformed
 
     private void jCheckBox_DMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_DMActionPerformed
         checkBoxList_rfactors.add(jCheckBox_DM);
     }//GEN-LAST:event_jCheckBox_DMActionPerformed
+
+    private void jCheckBox8PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jCheckBox8PropertyChange
+        if(rb_man.isSelected())
+            jCheckBox8.setEnabled(false);
+        if(rb_woman.isSelected())
+            jCheckBox8.setEnabled(true);
+    }//GEN-LAST:event_jCheckBox8PropertyChange
+
+    private void jCheckBox8StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jCheckBox8StateChanged
+        
+    }//GEN-LAST:event_jCheckBox8StateChanged
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1146,6 +1165,10 @@ public class TestWindow extends javax.swing.JFrame {
     }
     
     private void transactionsNext(){
+        if(rb_man.isSelected())
+            jCheckBox8.setEnabled(false);
+        if(rb_woman.isSelected())
+            jCheckBox8.setEnabled(true);
         int currentIndex = tabbed.getSelectedIndex();
         int maxIndex = tabbed.getTabCount() - 1;
         if (currentIndex < maxIndex) {
@@ -1177,17 +1200,12 @@ public class TestWindow extends javax.swing.JFrame {
             for(JCheckBox checkbox: checkBoxList_rfactors){
                 rfactors.add("'"+checkbox.getText()+"'");
             }
-            String option_sex = rb_man.getActionCommand();
+            
             if(rb_woman.isSelected()){
-                option_sex = rb_woman.getActionCommand();
                 if(age>15 && age <50){
-                    rfactors.add("Mujer en edad fertil");
+                    rfactors.add("'Mujer en edad fertil'");
                 }
             }
-            
-            
-            
-            
             
             // consultar el SBC
             String msg = connect_with_SBC(diastolica,sistolica,rmconditons.toString(),rfactors.toString());
@@ -1211,40 +1229,13 @@ public class TestWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "No ha completado todas las pruebas, compruebe los campos.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
-    
-    private String optionSelected(ButtonGroup button_group){
-        ButtonModel selectedButtonModel = button_group.getSelection();
-        return selectedButtonModel.getActionCommand();
-    }
-    
-//    private String multiple_optionSelected(List<JCheckBox> checkBoxList){
-//        for (JCheckBox checkBox : checkBoxList) {
-//            checkBox.addActionListener(new ActionListener() {
-//                @Override
-//                public void actionPerformed(ActionEvent e) {
-//                    if (checkBox.isSelected()) {
-//                        selectedOptions.add(checkBox);
-//                    } else {
-//                        selectedOptions.remove(checkBox);
-//                    }
-//                }
-//            });
-//        }
-//        
-//        return selectedButtonModel.getActionCommand();
-//    }
-    
+        
     private boolean isInteger(String input){
         String regex = "^[1-9]\\d*$";
         Pattern pattern = Pattern.compile(regex);
         return pattern.matcher(input).matches();
     }
     
-//    private boolean isFloat(String input){
-//        String regex = "^\\d+(\\.\\d+)?$";
-//        Pattern pattern = Pattern.compile(regex);
-//        return pattern.matcher(input).matches();
-//    }
     
     private boolean is_biometric_valid(){
         String age = tf_age.getText();
@@ -1257,30 +1248,6 @@ public class TestWindow extends javax.swing.JFrame {
         }
         return false;
     }
-    
-//    private boolean is_strenght_valid(){
-//        String repeat = tf_repeat.getText();
-//        return isInteger(repeat) && Integer.parseInt(repeat) > 0;
-//    }
-    
-//    private boolean is_resistance_valid(){
-//        String pulse1 = tf_pulse1.getText();
-//        String pulse2 = tf_pulse2.getText();
-//        return isInteger(pulse1) && Integer.parseInt(pulse1) > 0
-//                && isInteger(pulse2) && Integer.parseInt(pulse2) > 0;
-//    }
-    
-//    private int repeats(double weigth){
-//        int repeat = 0;
-//        if (weigth <= 60){
-//            repeat = 30;
-//        }else if(weigth <= 80){
-//            repeat = 25;
-//        }else{
-//            repeat = 20;
-//        }
-//        return repeat;
-//    }
     
     private void enabled_tabs(boolean enabled){
         tabbed.setEnabledAt(1, enabled);
@@ -1309,11 +1276,16 @@ public class TestWindow extends javax.swing.JFrame {
         tf_age.setText("");
         tf_ta_diastolica.setText("");
         tf_ta_sistolica.setText("");
-        //jcb_coo_1.setSelected(true);
-//        jcb_fle_1.setSelected(true);
-//        tf_repeat.setText("");
-//        tf_pulse1.setText("");
-//        tf_pulse2.setText("");       
+        for(JCheckBox checkbox: checkBoxList_rmconditons){
+                checkbox.setSelected(false);
+                //System.out.println(checkbox.getText());
+        }
+        for(JCheckBox checkbox: checkBoxList_rfactors){
+                checkbox.setSelected(false);
+                //System.out.println(checkbox.getText());
+        }
+        checkBoxList_rmconditons.clear();
+        checkBoxList_rfactors.clear();   
     }
     
     private String connect_with_SBC(int ta_diastolica, int ta_sitolica, String m_conditions, String r_factors){

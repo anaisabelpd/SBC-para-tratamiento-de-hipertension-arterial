@@ -835,7 +835,9 @@
                     <Property name="toolTipText" type="java.lang.String" value="Embarazo"/>
                   </Properties>
                   <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jCheckBox8StateChanged"/>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox8ActionPerformed"/>
+                    <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="jCheckBox8PropertyChange"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox9">

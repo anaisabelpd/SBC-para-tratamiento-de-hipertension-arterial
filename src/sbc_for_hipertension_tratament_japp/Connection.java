@@ -76,7 +76,6 @@ public class Connection {
     public String propuesta_estrategia_terapeutica(String r_factor, String categoria) {
         String res = "";
         consult = "propuesta_estrategia_terapeutica("+r_factor+","+categoria+", Msj).";
-        System.out.println(categoria);
         query = new Query(consult);
         
         if (!query.hasSolution()) {
@@ -116,6 +115,11 @@ public class Connection {
                 
                 res = mensaje+", ";
             }
+            res = res.replace("[", "");
+            res = res.replace("]", "");
+            res = res.replace("(", "");
+            res = res.replace(")", "");
+            res = res.replace("|", "");
             res = res.substring(0, res.length()-2);
         }
         return res;
@@ -137,6 +141,11 @@ public class Connection {
                 String mensaje = new String(bytes, StandardCharsets.UTF_8);
                 res = mensaje+", ";
             }
+            res = res.replace("[", "");
+            res = res.replace("]", "");
+            res = res.replace("(", "");
+            res = res.replace(")", "");
+            res = res.replace("|", "");
             res = res.substring(0, res.length()-2);
         }
         return res;
