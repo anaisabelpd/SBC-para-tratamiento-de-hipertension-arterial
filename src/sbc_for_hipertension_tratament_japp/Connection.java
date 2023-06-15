@@ -26,7 +26,7 @@ public class Connection {
         }
     }
 
-    // consultar tratamiento para la hipertensión
+    // consultar categoría de la hipertensión
     public String categoria(int ta_diastolica, int ta_sistolica) {
         String res = new String();
         consult = "categoria("+ta_sistolica+","+ta_diastolica+", Msj).";
