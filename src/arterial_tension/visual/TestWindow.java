@@ -1184,8 +1184,6 @@ public class TestWindow extends javax.swing.JFrame {
     }
     
     private void actionFinish() {
-//        double weigth = Double.parseDouble(tf_weigth.getText());
-//        double height = Double.parseDouble(tf_height.getText())/100;
         if (is_biometric_valid()) {
             // obtener datos insertados 
             int age = Integer.parseInt(tf_age.getText());
@@ -1199,8 +1197,7 @@ public class TestWindow extends javax.swing.JFrame {
             List<String> rfactors = new ArrayList<>();
             for(JCheckBox checkbox: checkBoxList_rfactors){
                 rfactors.add("'"+checkbox.getText()+"'");
-            }
-            
+            }            
             if(rb_woman.isSelected()){
                 if(age>15 && age <50){
                     rfactors.add("'Mujer en edad fertil'");
@@ -1290,7 +1287,7 @@ public class TestWindow extends javax.swing.JFrame {
     
     private String connect_with_SBC(int ta_diastolica, int ta_sitolica, String m_conditions, String r_factors){
         String[] files = new String[1];
-        files[0] = "src/sbc_for_hipertension_tratament_japp/SBC.pl";
+        files[0] = "prolog/SBC.pl";
         Connection c = new Connection(files);
         String cat_aux = c.categoria(ta_diastolica, ta_sitolica);
         String cat = "Categoria: "+cat_aux;
