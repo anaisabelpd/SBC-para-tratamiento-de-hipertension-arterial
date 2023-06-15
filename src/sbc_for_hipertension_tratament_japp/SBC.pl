@@ -98,9 +98,10 @@ contraind_abso_por_f(['Insuficiencia renal aguda', 'Insuficiencia renal grave', 
 %F = 'Antagonistas del calcio-dialtiazem' ;
 %false.
 
+%Contraindicaciones absolutas
 contraind_a(ListaDeSintomas,F):- contraind_abso_por_f(LCpF,F),not(disjuntos(LCpF,ListaDeSintomas)).
 
-%Disjuncion entre conjuntos A y B
+%Disjunción entre conjuntos A y B
 disjuntos([],_).
 disjuntos([X|Ra],B):- memb(X,B),
                       !,fail;
