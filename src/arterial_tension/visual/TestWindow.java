@@ -503,7 +503,7 @@ public class TestWindow extends javax.swing.JFrame {
                 .addComponent(jp_footer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        tabbed.addTab("Condicion Medica", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_diet.png")), jp_m_condition1); // NOI18N
+        tabbed.addTab("Condición Médica", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_diet.png")), jp_m_condition1); // NOI18N
 
         jp_mcondition2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -597,8 +597,8 @@ public class TestWindow extends javax.swing.JFrame {
         });
 
         jCheckBox11.setBackground(new java.awt.Color(102, 255, 0));
-        jCheckBox11.setText("Atletas en activo");
         jCheckBox11.setToolTipText("Consumo de alcohol");
+        jCheckBox11.setLabel("Atletas inactivo");
         jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox11ActionPerformed(evt);
@@ -677,7 +677,7 @@ public class TestWindow extends javax.swing.JFrame {
                             .addComponent(jCheckBox8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(80, 80, 80)
                         .addGroup(jp_mcondition2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jCheckBox17, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                            .addComponent(jCheckBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 149, Short.MAX_VALUE)
                             .addComponent(jCheckBox15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jCheckBox12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jCheckBox13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -713,7 +713,7 @@ public class TestWindow extends javax.swing.JFrame {
                 .addComponent(jp_footer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        tabbed.addTab("Condicion Medica", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_three-dumbell.png")), jp_mcondition2); // NOI18N
+        tabbed.addTab("Condición Médica", new javax.swing.ImageIcon(getClass().getResource("/arterial_tension/images/icon_three-dumbell.png")), jp_mcondition2); // NOI18N
 
         jp_resistance.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1290,8 +1290,8 @@ public class TestWindow extends javax.swing.JFrame {
         files[0] = "prolog/SBC.pl";
         Connection c = new Connection(files);
         String cat_aux = c.categoria(ta_diastolica, ta_sitolica);
-        String cat = "Categoria: "+cat_aux;
-        String rcv = "Riego cardriovascular: "+c.rcv(r_factors, cat_aux);
+        String cat = "Categoría: "+cat_aux;
+        String rcv = "Riesgo cardriovascular: "+c.rcv(r_factors, cat_aux);
         String estrategia = "Estrategia: "+c.propuesta_estrategia_terapeutica(r_factors, cat_aux);
         String cont_abs = "Contraindiaciones absolutas: "+c.contraind_a(m_conditions);
         String cont_relat = "Contraindicaiones relativa: "+c.contraind_r(m_conditions);

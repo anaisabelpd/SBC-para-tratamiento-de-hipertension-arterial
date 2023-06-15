@@ -140,11 +140,11 @@ public class InfoWindow extends javax.swing.JFrame {
         );
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel5.setText("Sobre la aplicacion:");
+        jLabel5.setText("Sobre la aplicación:");
 
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
-        jTextArea3.setText("Esta aplicacion fue concebida con un carácter educativo como una propuesta de herramienta para\nla ayuda a los profesionales de la salud. Se basó en el analisis de la Guía Cubana de Hipertensión\nArterial en conjunto con la experiencia de un especialista en la rama de la cardiología. Por ello se\nrecomienda en caso de uso contar con la estricta supervision de un profesional de la salud.");
+        jTextArea3.setText("Esta aplicación fue concebida con un carácter educativo como una propuesta de herramienta para\nla ayuda a los profesionales de la salud. Se basó en el análisis de la Guía Cubana de Hipertensión\nArterial en conjunto con la experiencia de un especialista en la rama de la cardiología. Por ello se\nrecomienda en caso de uso contar con la estricta supervisión de un profesional de la salud.");
         jScrollPane3.setViewportView(jTextArea3);
 
         javax.swing.GroupLayout jp_biometricLayout = new javax.swing.GroupLayout(jp_biometric);
