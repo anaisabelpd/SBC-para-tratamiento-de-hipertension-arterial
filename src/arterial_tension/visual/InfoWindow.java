@@ -379,8 +379,7 @@ public class InfoWindow extends javax.swing.JFrame {
         mw.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_formWindowClosing
-    // TODO add your handling code here:
-    // TODO add your handling code here:
+
 
     private void jcb_coo_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_coo_1ActionPerformed
         // TODO add your handling code here:
@@ -485,43 +484,6 @@ public class InfoWindow extends javax.swing.JFrame {
             btn.setBackground(Color.gray);
         }
     }
-    
-//    private int heart_rate_difference(){
-//        int pulse1 = Integer.parseInt(tf_pulse1.getText());
-//        int pulse2 =  Integer.parseInt(tf_pulse2.getText());     
-//        return (pulse2*2) - (pulse1*2);       
-//    }
-    
-//    private void clean_fields(){
-//        tf_age.setText("");
-//        tf_ta_diastolica.setText("");
-//        tf_ta_sistolica.setText("");
-//        for(JCheckBox checkbox: checkBoxList_rmconditons){
-//                checkbox.setSelected(false);
-//                //System.out.println(checkbox.getText());
-//        }
-//        for(JCheckBox checkbox: checkBoxList_rfactors){
-//                checkbox.setSelected(false);
-//                //System.out.println(checkbox.getText());
-//        }
-//        checkBoxList_rmconditons.clear();
-//        checkBoxList_rfactors.clear();   
-//    }
-    
-//    private String connect_with_SBC(int ta_diastolica, int ta_sitolica, String m_conditions, String r_factors){
-//        String[] files = new String[1];
-//        files[0] = "src/sbc_for_hipertension_tratament_japp/SBC.pl";
-//        Connection c = new Connection(files);
-//        String cat_aux = c.categoria(ta_diastolica, ta_sitolica);
-//        String cat = "Categoria: "+cat_aux;
-//        String rcv = "Riego cardriovascular: "+c.rcv(r_factors, cat_aux);
-//        String estrategia = "Estrategia: "+c.propuesta_estrategia_terapeutica(r_factors, cat_aux);
-//        String cont_abs = "Contraindiaciones absolutas: "+c.contraind_a(m_conditions);
-//        String cont_relat = "Contraindicaiones relativa: "+c.contraind_r(m_conditions);
-//        
-//        return cat.replaceAll("'", "")+'\n'+rcv.replaceAll("'", "")+'\n'+estrategia.replaceAll("'", "")+'\n'+cont_abs.replaceAll("'", "")+'\n'+cont_relat.replaceAll("'", "");
-//    }
-    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;

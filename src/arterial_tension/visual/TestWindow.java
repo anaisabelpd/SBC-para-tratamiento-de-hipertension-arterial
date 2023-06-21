@@ -931,9 +931,7 @@ public class TestWindow extends javax.swing.JFrame {
         mw.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_formWindowClosing
-    // TODO add your handling code here:
-    // TODO add your handling code here:
-
+    
     private void jcb_coo_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_coo_1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcb_coo_1ActionPerformed
@@ -1192,7 +1190,6 @@ public class TestWindow extends javax.swing.JFrame {
             List<String> rmconditons = new ArrayList<>();
             for(JCheckBox checkbox: checkBoxList_rmconditons){
                 rmconditons.add("'"+checkbox.getText()+"'");
-                //System.out.println(checkbox.getText());
             }
             List<String> rfactors = new ArrayList<>();
             for(JCheckBox checkbox: checkBoxList_rfactors){
@@ -1208,7 +1205,6 @@ public class TestWindow extends javax.swing.JFrame {
             String msg = connect_with_SBC(diastolica,sistolica,rmconditons.toString(),rfactors.toString());
             // mostar dialogo con resultado
             ResultDialog rw = new ResultDialog(null, true);
-//            rw.setPoints(msg[0]);
             rw.setMessage(msg);
             rw.setVisible(true);
             // accion a realizar
@@ -1262,13 +1258,7 @@ public class TestWindow extends javax.swing.JFrame {
             btn.setBackground(Color.gray);
         }
     }
-    
-//    private int heart_rate_difference(){
-//        int pulse1 = Integer.parseInt(tf_pulse1.getText());
-//        int pulse2 =  Integer.parseInt(tf_pulse2.getText());     
-//        return (pulse2*2) - (pulse1*2);       
-//    }
-    
+      
     private void clean_fields(){
         tf_age.setText("");
         tf_ta_diastolica.setText("");
